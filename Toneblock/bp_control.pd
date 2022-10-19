@@ -1,0 +1,32 @@
+#N canvas 0 0 450 300 10;
+#X floatatom 19 137 10 0 0 0 - - -;
+#X obj 100 137 pack f f;
+#X floatatom 181 138 8 0 0 0 - - -;
+#X obj 179 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 89 116 0;
+#X obj 181 116 / 100;
+#X floatatom 122 116 8 0 0 0 - - -;
+#X obj 19 184 outlet;
+#X obj 100 184 outlet;
+#X obj 19 24 inlet;
+#X obj 122 64 inlet;
+#X obj 61 26 hsl 128 15 32 32000 1 0 empty empty Frequency -2 -8 0
+10 -262130 -1 -1 0 1;
+#X obj 164 66 hsl 128 15 1 1201 1 0 empty empty Filter_Magnitude -2
+-8 0 10 -262130 -1 -1 0 1;
+#X obj 122 95 - 1;
+#X connect 0 0 1 0;
+#X connect 0 0 7 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 1;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 9 0 0 0;
+#X connect 10 0 13 0;
+#X connect 11 0 0 0;
+#X connect 12 0 13 0;
+#X connect 13 0 6 0;

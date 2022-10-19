@@ -1,0 +1,13 @@
+#N canvas 856 746 1013 364 12;
+#X obj 81 7 inlet;
+#X obj 134 7 inlet;
+#X obj 81 62 vline~;
+#X text 173 7 Ramp millis.;
+#X text 14 7 Frequency;
+#X text 134 85 Frequency signal;
+#X obj 81 85 outlet~;
+#X obj 81 38 pack f f;
+#X connect 0 0 7 0;
+#X connect 1 0 7 1;
+#X connect 2 0 6 0;
+#X connect 7 0 2 0;

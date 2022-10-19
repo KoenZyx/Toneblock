@@ -1,0 +1,13 @@
+#N canvas 0 0 450 300 10;
+#X obj 40 64 t b f;
+#X obj 24 31 inlet;
+#X obj 64 31 inlet;
+#X obj 24 117 outlet;
+#X text 30 145 Addition that also outputs when the right argument changes
+;
+#X obj 24 91 +;
+#X connect 0 0 5 0;
+#X connect 0 1 5 1;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 5 0 3 0;

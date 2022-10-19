@@ -1,0 +1,4 @@
+Pure Data Synth.
+
+Version: 1.7
+Author: Koen Riksen

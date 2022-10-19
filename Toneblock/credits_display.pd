@@ -1,0 +1,14 @@
+#N canvas 286 286 450 300 12;
+#X obj 0 0 cnv 15 150 110 empty empty empty 20 12 0 14 #c4fcc4 #404040
+0;
+#X obj 9 36 cnv 15 132 74 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X text 20 37 Camomile by;
+#X text 21 50 Pierre Guillot;
+#X text 9 5 Pure Data by;
+#X text 10 18 Miller Puckette;
+#X obj 17 68 cnv 15 116 42 empty empty empty 20 12 0 14 #fcfcc4 #404040
+0;
+#X text 35 85 Koen Riksen;
+#X text 34 72 ToneBlock by;
+#X coords 0 -1 1 1 150 110 2 0 0;

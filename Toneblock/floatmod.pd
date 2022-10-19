@@ -1,0 +1,28 @@
+#N canvas 208 208 853 300 12;
+#X text 234 232 Behaves the same as wrap from the zexy lib \, or at
+least very close to it;
+#X obj 106 32 inlet;
+#X obj 106 236 outlet;
+#X obj 155 32 inlet;
+#X msg 204 57 2 \$1;
+#X obj 204 83 pow;
+#X obj 106 138 * \$2;
+#X obj 106 164 mod \$2;
+#X obj 106 190 / \$2;
+#X obj 155 118 * \$1;
+#X obj 204 32 loadfloat \$2;
+#X obj 155 58 t b f;
+#X connect 1 0 6 0;
+#X connect 3 0 11 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 5 0 7 1;
+#X connect 5 0 8 1;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 9 0 7 1;
+#X connect 10 0 4 0;
+#X connect 11 0 9 0;
+#X connect 11 1 9 1;
