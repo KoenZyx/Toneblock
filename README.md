@@ -5,7 +5,7 @@ TONEBLOCK STILL NEEDS WORK, EXPECT BUGS!
 And please read the following:
 
 ## Install notes
--Place the Toneblock folder* in your VST3 folder and (if needed) tell your DAW to scan for new plugins. 
+- Place the Toneblock folder* in your VST3 folder and (if needed) tell your DAW to scan for new plugins. 
   *the folder name needs to be exactly the same as the name of the vst3 file
   
 ## Usage notes
