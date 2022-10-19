@@ -1,0 +1,1 @@
+Disable automation for things like normalize and remove_dc, maybe that will reduce the data overhead.
