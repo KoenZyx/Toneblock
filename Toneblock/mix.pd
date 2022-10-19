@@ -1,0 +1,14 @@
+#N canvas 1622 915 860 300 10;
+#X obj 15 50 inlet;
+#X obj 97 50 inlet;
+#X obj 15 146 outlet;
+#X obj 180 50 inlet;
+#X text 188 29 Mix;
+#X text 19 29 Dry;
+#X text 100 29 Wet;
+#X obj 15 107 expr ($f1*(1-$f3))+($f2*$f3);
+#X text 59 145 Mixed;
+#X connect 0 0 7 0;
+#X connect 1 0 7 1;
+#X connect 3 0 7 2;
+#X connect 7 0 2 0;

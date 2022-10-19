@@ -7,7 +7,7 @@ playhead true;
 taillength 8;
 description Infos.txt;
 compatibility 1.0.7;
-param -name Fundamental -label Hz. -min 8.1758 -max 12543.9 -default 420; 
+param -name Fundamental -label Hz. -min 8.1758 -max 12543.9 -default 440; 
 param -name FrequencyAttack -label ms -min 0 -max 2000 -default 12; 
 param -name TonesPerOctave -label TpOct -min 1 -max 128 -default 12 -nsteps 128; 
 param -name Course -label semitones -min -64 -max 64 -default 0;

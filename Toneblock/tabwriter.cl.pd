@@ -6,8 +6,8 @@
 #X obj 58 147 pack f 20;
 #X obj 109 18 inlet;
 #X obj 291 18 inlet;
-#X obj 293 188 float \$1;
-#X obj 293 167 loadbang;
+#X obj 241 220 float \$1;
+#X obj 241 199 loadbang;
 #X obj 58 18 inlet;
 #X obj 58 68 unpack f f;
 #X obj 58 124 * 0;

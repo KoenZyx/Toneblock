@@ -1,13 +1,13 @@
-#N canvas 387 181 2018 1045 10;
+#N canvas 387 181 1648 1047 10;
 #X obj 0 0 cnv 15 356 420 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
 #X obj 0 0 cnv 15 254 180 empty empty Input 28 12 0 14 #b8d4fc #404040
 0;
 #X obj 0 181 cnv 15 356 239 empty empty Output 20 12 0 14 #b8d4fc #404040
 0;
-#X obj 0 101 cnv 15 100 80 empty empty Midi_In 20 12 0 14 #68fc6c #404040
+#X obj 5 101 cnv 15 100 80 empty empty Midi_In 20 12 0 14 #68fc6c #404040
 0;
-#X obj 101 56 cnv 15 194 142 empty empty Tuning 20 12 0 14 #c8fc6c
+#X obj 111 42 cnv 15 244 152 empty empty Tuning 20 12 0 14 #c8fc6c
 #404040 0;
 #X obj 974 92 cnv 15 300 420 empty empty Audio_Core 20 12 0 14 #fcd4a8
 #404040 0;
@@ -26,47 +26,17 @@
 #X obj 977 553 cnv 15 280 220 empty empty Debugging 20 12 0 14 #fcfcc4
 #404040 0;
 #X floatatom 52 240 4 0 0 0 - mid_voice_dis - 0;
-#X floatatom 58 141 5 0 0 0 - mid_note_dis - 0;
-#X floatatom 58 158 5 0 0 0 - mid_velocity_dis - 0;
+#X floatatom 63 141 5 0 0 0 - \$0-mid_note_dis - 0;
+#X floatatom 63 158 5 0 0 0 - \$0-mid_velocity_dis - 0;
 #X text 18 240 Voice;
-#X text 6 157 Velocity;
+#X text 11 157 Velocity;
 #X floatatom 52 260 6 0 0 0 - note_out_v - 0;
-#X floatatom 133 76 5 -64 64 0 - course_from_DAW course_select 0;
-#X obj 1341 378 hsl 240 22 0 1 0 1 vol_slider vol_from_daw empty -2
+#X obj 989 455 hsl 240 22 0 1 0 1 vol_slider vol_from_daw Volume -2
 -8 0 10 #fcfcfc #000000 #000000 4900 1;
-#X text 1337 364 Vol.;
-#X obj 1334 525 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X text 1350 518 Mouse;
 #X obj 12 399 bng 15 250 50 0 be_quiet empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#N canvas 1261 781 292 257 mouseReceive 0;
-#X obj 44 130 outlet;
-#X obj 44 38 r gui;
-#X obj 44 60 route mouse;
-#X msg 81 104 0;
-#X msg 44 104 1;
-#X obj 44 82 sel 1 0, f 13;
-#X connect 1 0 2 0;
-#X connect 2 0 5 0;
-#X connect 3 0 0 0;
-#X connect 4 0 0 0;
-#X connect 5 0 4 0;
-#X connect 5 1 3 0;
-#X restore 1334 497 pd mouseReceive;
-#X text 1350 531 down;
-#X floatatom 206 76 6 -1200 1200 0 - to_cent_dis cents_select 0;
-#X text 172 77 Cents;
-#X text 99 77 Notes;
-#X obj 121 93 hsl 121 15 -1200 1200 0 0 cent_slider_s fine_from_DAW
-empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 208 108 bng 15 250 50 0 offset_reset empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X text 132 108 Reset offset;
 #X floatatom 295 397 7 0 0 0 - rms_amplitude rms_vis 0;
 #X text 213 397 RMS amplitude;
-#X text 977 452 The phase input is for phase reset...;
-#X text 977 436 tabosc4~ doesn't support floats for phase;
 #N canvas 1034 377 820 815 synth 0;
 #X obj 188 591 outlet~;
 #X obj 240 591 outlet~;
@@ -187,6 +157,9 @@ stealing is turned off!, f 76;
 #X obj 160 315 t f f;
 #X text 364 552 Note off inlet is not needed;
 #X obj 337 17 inlet;
+#X text 438 322 The phase input is for phase reset...;
+#X text 438 306 tabosc4~ doesn't support floats for phase;
+#X text 259 257 Midi 69 is 440 Hz.;
 #X connect 2 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -271,7 +244,7 @@ stealing is turned off!, f 76;
 #X connect 14 0 4 1;
 #X connect 15 0 4 2;
 #X connect 16 0 4 0;
-#X restore 1014 475 pd midi_through;
+#X restore 1014 484 pd midi_through;
 #X obj 1014 184 filterbox_stereo;
 #N canvas 0 50 450 300 filter_settings 0;
 #X obj 111 85 r filter_freq;
@@ -473,11 +446,11 @@ signal in!);
 30 7 0 10 #c4fcfc #000000 #000000 0 1;
 #X obj 135 250 hradio 15 1 0 13 pingpong_speed_r daw_autopan_speed
 Frequency 9 7 0 10 #fcfcfc #000000 #000000 0;
-#N canvas 1041 286 742 695 midi_in_core 0;
-#X obj 453 339 notein, f 12;
-#X obj 116 133 poly 12 1, f 11;
-#X msg 371 494 stop;
-#X obj 165 181 t f f;
+#N canvas 1637 360 656 678 midi_in_core 0;
+#X obj 146 89 notein, f 12;
+#X obj 166 418 poly 12 1, f 11;
+#X msg 91 244 stop;
+#X obj 215 466 t f f;
 #N canvas 1462 445 450 300 midi_wip 0;
 #X obj 117 84 pgmin;
 #X floatatom 149 111 0 0 0 0 - - - 0;
@@ -519,44 +492,47 @@ from -8192 to 8191 - this won't change.;
 #X connect 19 0 4 0;
 #X connect 19 1 3 0;
 #X restore 151 12 pd midi_wip;
-#X obj 371 472 r stopPoly;
-#X obj 116 157 - 1;
-#X obj 274 181 t f f;
-#X obj 301 258 s velocity_to_synth;
-#X obj 487 429 s velocity_through;
-#X obj 165 284 s mid_note_dis;
-#X obj 274 284 s mid_velocity_dis;
-#X obj 559 385 s channel_through;
-#X obj 532 365 t f f;
-#X obj 532 407 s mid_channel_dis;
-#X obj 192 210 t f f;
-#X obj 219 235 s note_select;
-#X obj 192 258 s note_out_v;
-#X text 4 133 voice \, pitch \, vel.;
-#X obj 453 530 outlet;
-#X obj 453 498 pack f f;
-#X obj 487 365 t f f;
-#X connect 0 0 20 0;
-#X connect 0 1 21 0;
-#X connect 0 2 13 0;
+#X obj 91 222 r stopPoly;
+#X obj 166 442 - 1;
+#X obj 324 466 t f f;
+#X obj 351 543 s velocity_to_synth;
+#X obj 207 201 s velocity_through;
+#X obj 289 135 s channel_through;
+#X obj 262 115 t f f;
+#X obj 242 495 t f f;
+#X obj 269 520 s note_select;
+#X obj 242 543 s note_out_v;
+#X text 54 418 voice \, pitch \, vel.;
+#X obj 173 280 outlet;
+#X obj 173 248 pack f f;
+#X obj 146 115 t f f;
+#X obj 207 115 t f f f;
+#X text 90 372 Old stuff:;
+#X obj 67 179 s \$0-mid_note_dis;
+#X obj 226 179 s \$0-mid_velocity_dis;
+#X obj 262 157 s \$0-mid_channel_dis;
+#X connect 0 0 18 0;
+#X connect 0 1 19 0;
+#X connect 0 2 11 0;
 #X connect 1 0 6 0;
 #X connect 1 2 7 0;
-#X connect 2 0 19 0;
-#X connect 3 0 10 0;
-#X connect 3 1 15 0;
+#X connect 2 0 16 0;
+#X connect 3 1 12 0;
 #X connect 5 0 2 0;
-#X connect 7 0 11 0;
 #X connect 7 1 8 0;
-#X connect 13 0 14 0;
-#X connect 13 1 12 0;
-#X connect 15 0 17 0;
-#X connect 15 1 16 0;
-#X connect 20 0 19 0;
-#X connect 21 0 9 0;
-#X connect 21 1 20 1;
+#X connect 11 0 23 0;
+#X connect 11 1 10 0;
+#X connect 12 0 14 0;
+#X connect 12 1 13 0;
+#X connect 17 0 16 0;
+#X connect 18 0 21 0;
+#X connect 18 1 17 0;
+#X connect 19 0 9 0;
+#X connect 19 1 22 0;
+#X connect 19 2 17 1;
 #X restore 992 123 pd midi_in_core;
-#N canvas 1201 326 1057 661 receiver_core 0;
-#X obj 644 591 / 100;
+#N canvas 397 303 1057 661 receiver_core 0;
+#X obj 741 171 / 100;
 #N canvas 658 124 1245 972 ADSR_SIGNALS 0;
 #X obj 103 843 outlet;
 #X obj 153 843 outlet;
@@ -649,10 +625,10 @@ from -8192 to 8191 - this won't change.;
 #X connect 25 0 1 0;
 #X connect 26 0 2 0;
 #X connect 27 0 3 0;
-#X restore 742 619 pd ADSR_SIGNALS;
+#X restore 839 199 pd ADSR_SIGNALS;
 #X f 16;
-#X msg 760 595 10 80 0.1 50;
-#X obj 644 620 s vol_from_daw;
+#X msg 857 175 10 80 0.1 50;
+#X obj 741 200 s vol_from_daw;
 #X floatatom 312 443 5 0 0 0 - - - 0;
 #X obj 360 27 loadbang;
 #N canvas 708 587 1447 602 waveshaper_setting_receiving 0;
@@ -977,7 +953,7 @@ from -8192 to 8191 - this won't change.;
 #X connect 12 0 11 0;
 #X connect 12 1 4 1;
 #X restore 147 243 pd modulation_setting_receiving;
-#X text 659 557 Old stuff:;
+#X text 756 137 Old stuff:;
 #X obj 147 454 unpack f f;
 #X text 138 499 Probably print out if these get triggered by anything...
 ;
@@ -988,29 +964,31 @@ from -8192 to 8191 - this won't change.;
 #X text 505 84 We seem to be reducing the index of the values we're
 passing through... bad design?;
 #X text 351 445 should be 0;
-#X msg 537 154 6 22;
-#X text 574 154 Attack;
-#X msg 535 180 17 1;
-#X text 570 181 Phase;
-#X msg 541 258 41 1;
-#X text 577 258 SinePartial 1;
-#X msg 542 350 68 1;
-#X text 579 350 Modulation;
-#X msg 544 382 70 2;
-#X text 579 382 Filter select;
-#X msg 540 234 40 \$1;
-#X obj 539 215 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X text 579 234 remove DC;
-#X obj 540 300 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
-#X msg 540 324 67 \$1;
-#X text 582 326 Sine Seq;
-#X msg 538 125 3 12;
-#X text 572 127 TpO;
-#X msg 626 153 9 120;
-#X text 671 154 Release;
 #X obj 147 26 param.get.multi 81 camo_multi;
+#X obj 502 121 cnv 15 220 400 empty empty Routing\\\ tests 20 12 0
+14 #c6ffc7 #404040 0;
+#X msg 520 199 6 22;
+#X text 557 199 Attack;
+#X msg 518 225 17 1;
+#X text 553 226 Phase;
+#X msg 524 303 41 1;
+#X text 560 303 SinePartial 1;
+#X msg 525 395 68 1;
+#X text 562 395 Modulation;
+#X msg 527 427 70 2;
+#X text 562 427 Filter select;
+#X msg 523 279 40 \$1;
+#X obj 522 260 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 562 279 remove DC;
+#X obj 523 345 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X msg 523 369 67 \$1;
+#X text 565 371 Sine Seq;
+#X msg 521 170 3 12;
+#X text 555 172 TpO;
+#X msg 609 198 9 120;
+#X text 654 199 Release;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 5 0 17 0;
@@ -1036,9 +1014,9 @@ passing through... bad design?;
 #X connect 27 0 10 0;
 #X connect 29 0 10 0;
 #X connect 31 0 10 0;
-#X connect 32 0 31 0;
-#X connect 34 0 35 0;
-#X connect 35 0 10 0;
+#X connect 33 0 10 0;
+#X connect 34 0 33 0;
+#X connect 36 0 37 0;
 #X connect 37 0 10 0;
 #X connect 39 0 10 0;
 #X connect 41 0 10 0;
@@ -1177,44 +1155,21 @@ Frequency 9 7 0 10 #fcfcfc #000000 #000000 0;
 18 7 0 10 #c4fccc #000000 #000000 0 1;
 #X text 1165 244 AutoVol;
 #X text 1098 218 AutoPan;
-#X obj 6 19 tgl 15 0 empty daw_playing DAW_Playing 18 8 0 10 #fcfcfc
+#X obj 6 49 tgl 15 0 empty daw_playing DAW_Playing 18 8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 6 34 tgl 15 0 empty daw_recording DAW_Recording 18 8 0 10 #fcfcfc
+#X obj 6 64 tgl 15 0 empty daw_recording DAW_Recording 18 8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 6 49 tgl 15 0 empty daw_looping DAW_Looping 18 8 0 10 #fcfcfc
+#X obj 6 79 tgl 15 0 empty daw_looping DAW_Looping 18 8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X floatatom 223 15 4 0 0 0 - numerator_from_DAW - 0;
-#X floatatom 223 32 4 0 0 0 - denumerator_from_DAW - 0;
-#X floatatom 95 9 7 0 0 0 - bpm_from_DAW - 0;
-#X text 165 25 Time Sig.;
-#X floatatom 58 124 4 0 0 0 - mid_channel_dis - 0;
-#X text 12 124 Channel;
+#X floatatom 182 4 4 0 0 0 - numerator_from_DAW - 0;
+#X floatatom 182 21 4 0 0 0 - denumerator_from_DAW - 0;
+#X floatatom 21 32 7 0 0 0 - bpm_from_DAW - 0;
+#X text 124 14 Time Sig.;
+#X floatatom 63 124 4 0 0 0 - \$0-mid_channel_dis - 0;
+#X text 17 124 Channel;
 #X text 24 261 Note;
-#X text 30 141 Note;
-#N canvas 1564 701 450 300 canvas_control 0;
-#N canvas 271 835 450 300 gui_resizer 0;
-#X obj 6 29 r new_gui_size;
-#X obj 116 29 r new_gui_width;
-#X obj 236 29 r new_gui_height;
-#X obj 158 72 t b f;
-#X obj 116 129 t b a;
-#X msg 116 209 gui resize;
-#X obj 116 230 s camomile;
-#X text 284 202 last two numbers are canvas offset;
-#X text 284 187 \$1 and \$2 canvas width and height;
-#X obj 116 104 pack 356 420;
-#X msg 143 152 \; pd-Toneblock.pd donecanvasdialog 1 -1 1 0 1 1 1 \$1
-\$2 0 0;
-#X connect 0 0 4 0;
-#X connect 1 0 9 0;
-#X connect 2 0 3 0;
-#X connect 3 0 9 0;
-#X connect 3 1 9 1;
-#X connect 4 0 5 0;
-#X connect 4 1 10 0;
-#X connect 5 0 6 0;
-#X connect 9 0 4 0;
-#X restore 79 177 pd gui_resizer;
+#X text 35 141 Note;
+#N canvas 1564 701 733 509 canvas_control 0;
 #X obj 31 151 s new_gui_size;
 #X obj 141 151 s new_gui_width;
 #X obj 261 151 s new_gui_height;
@@ -1236,61 +1191,52 @@ Frequency 9 7 0 10 #fcfcfc #000000 #000000 0;
 #X obj 25 9 r minimaximize_ui_panel;
 #X obj 25 36 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
 0 1;
-#X connect 4 0 5 0;
-#X connect 5 0 8 0;
-#X connect 5 1 16 0;
-#X connect 6 0 4 0;
-#X connect 7 0 1 0;
-#X connect 8 0 13 0;
-#X connect 8 1 12 0;
-#X connect 9 0 10 0;
-#X connect 10 0 15 0;
-#X connect 10 1 14 0;
-#X connect 11 0 9 0;
-#X connect 12 0 9 0;
+#X obj 31 186 r new_gui_size;
+#X obj 141 186 r new_gui_width;
+#X obj 261 186 r new_gui_height;
+#X obj 165 289 canvas_control Toneblock.pd 356 420;
+#X msg 165 246 width \$1;
+#X msg 235 246 height \$1;
+#X msg 95 246 size \$1;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 4 1 15 0;
+#X connect 5 0 3 0;
+#X connect 6 0 0 0;
+#X connect 7 0 12 0;
+#X connect 7 1 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 14 0;
+#X connect 9 1 13 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
+#X connect 12 0 1 0;
 #X connect 13 0 2 0;
-#X connect 14 0 3 0;
-#X connect 15 0 3 0;
-#X connect 16 0 2 0;
-#X connect 17 0 18 0;
-#X connect 18 0 4 0;
-#X connect 18 0 9 0;
-#X restore 1046 524 pd canvas_control;
+#X connect 14 0 2 0;
+#X connect 15 0 1 0;
+#X connect 16 0 17 0;
+#X connect 17 0 3 0;
+#X connect 17 0 8 0;
+#X connect 18 0 24 0;
+#X connect 19 0 22 0;
+#X connect 20 0 23 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 0;
+#X connect 24 0 21 0;
+#X restore 986 524 pd canvas_control;
 #X obj 1109 10 text define -k \$0-programs;
 #A set empty 10 80 0.1 50 92 2 0 0 0 0 5 2 1 10 2 440 1 0 0 500 0 4
 0 4 0 0 1 1 0.25 0.25 -0.5 2 1 0.5 \; empty 1 80 0.2 80 60 2 0 0 0
 2 5 2 0.4 3 2 440 40 0 0.625 300 0 4 0 4 0 0 1 1 0.25 0.25 -0.5 2 1
 0.5 \;;
 #X obj 1108 33 program.manager \$0-programs;
-#N canvas 182 182 450 300 credits 0;
-#X obj 31 80 cnv 15 170 110 empty empty empty 20 12 0 14 #c4fcc4 #404040
-0;
-#X obj 40 116 cnv 15 152 74 empty empty empty 20 12 0 14 #c4c4fc #404040
-0;
-#X text 50 118 Camomile by;
-#X text 51 131 Pierre Guillot;
-#X text 40 86 Pure Data by;
-#X text 41 99 Miller Puckette;
-#X obj 48 148 cnv 15 136 42 empty empty empty 20 12 0 14 #fcfcc4 #404040
-0;
-#X text 57 161 Koen Riksen;
-#X text 56 148 ToneBlock by;
-#X restore 1188 524 pd credits;
-#X obj 1358 680 bng 15 250 50 0 show_hide_waves_2 empty empty 17 7
-0 10 #fcfcfc #000000 #000000;
 #X text 917 711 vvvv;
 #X text 923 699 0 0;
-#X text 1331 417 DAW settings are shared between instances so we should
-use those for tone \, that way we can make sure multiple instances
-sound good together;
 #X obj 531 895 loadbang;
 #X obj 8 429 wavebranch;
 #X obj 668 895 r \$0-array_name_sines;
-#X text 1374 679 Show/Hide WaveShaper;
-#X obj 1498 680 bng 15 250 50 0 show_hide_waves_2 empty empty 17 7
-0 10 #fcfcfc #000000 #000000;
 #X msg 531 916 symbol Wave;
-#N canvas 2736 676 1744 726 persister_core 0;
+#N canvas 551 271 1744 726 persister_core 0;
 #X obj 75 470 * 100;
 #X obj 75 446 r vol_persist;
 #X obj 98 82 unpack f f;
@@ -1477,30 +1423,42 @@ comes out incremented by the number of settings in that stage.;
 #N canvas 889 527 847 456 Tuning_persistence_stackable 0;
 #X obj 227 38 r tuning_one;
 #X obj 311 38 r tuning_two;
-#N canvas 1500 781 693 469 tuning_one_Setting_manager 0;
-#X obj 70 36 inlet;
+#N canvas 1261 537 693 469 tuning_one_Setting_manager 0;
+#X obj 53 36 inlet;
 #X obj 53 167 pair 0;
 #X obj 102 167 pair 1;
-#X obj 151 167 pair 2;
-#X obj 53 230 outlet;
-#X obj 184 230 outlet;
-#X obj 53 89 route fun slide tpo, f 25;
+#X obj 152 167 pair 2;
+#X obj 53 270 outlet;
+#X obj 304 270 outlet;
 #X obj 53 131 change;
 #X obj 102 131 change;
-#X obj 151 131 change;
-#X connect 0 0 6 0;
+#X obj 152 131 change;
+#X obj 202 167 pair 3;
+#X obj 271 167 pair 4;
+#X obj 202 131 change -1;
+#X obj 271 131 change -1;
+#X obj 53 89 route fun slide tpo course fine, f 42;
+#X connect 0 0 13 0;
 #X connect 1 0 4 0;
 #X connect 1 1 5 0;
 #X connect 2 0 4 0;
 #X connect 2 1 5 0;
 #X connect 3 0 4 0;
 #X connect 3 1 5 0;
-#X connect 6 0 7 0;
-#X connect 6 1 8 0;
-#X connect 6 2 9 0;
-#X connect 7 0 1 0;
-#X connect 8 0 2 0;
-#X connect 9 0 3 0;
+#X connect 6 0 1 0;
+#X connect 7 0 2 0;
+#X connect 8 0 3 0;
+#X connect 9 0 4 0;
+#X connect 9 1 5 0;
+#X connect 10 0 4 0;
+#X connect 10 1 5 0;
+#X connect 11 0 9 0;
+#X connect 12 0 10 0;
+#X connect 13 0 6 0;
+#X connect 13 1 7 0;
+#X connect 13 2 8 0;
+#X connect 13 3 11 0;
+#X connect 13 4 12 0;
 #X restore 227 68 pd tuning_one_Setting_manager;
 #X obj 227 295 s \$0-param_persist_pair;
 #X obj 227 228 pack f f;
@@ -1537,10 +1495,6 @@ comes out incremented by the number of settings in that stage.;
 #X connect 13 1 14 0;
 #X connect 15 0 13 0;
 #X connect 16 0 11 0;
-#X connect 17 0 4 0;
-#X connect 17 1 19 0;
-#X connect 18 0 4 0;
-#X connect 18 1 19 0;
 #X connect 19 0 7 0;
 #X connect 20 0 21 1;
 #X connect 21 0 3 0;
@@ -1701,76 +1655,78 @@ comes out incremented by the number of settings in that stage.;
 #X restore 975 56 pd persister_core;
 #N canvas 2294 582 1920 997 (subpatch) 0;
 #X array Wave 515 float 1;
-#A 0 0.916122 0.916092 0.916092 0.916031 0.916 0.915909 0.915848 0.915726
-0.915634 0.915482 0.915359 0.915176 0.915024 0.91481 0.914627 0.914383
-0.914169 0.913895 0.913651 0.913345 0.913071 0.912735 0.91243 0.912064
-0.911728 0.911331 0.910965 0.910538 0.910141 0.909683 0.909256 0.908768
-0.90831 0.907791 0.907303 0.906754 0.906235 0.905655 0.905106 0.904495
-0.903915 0.903275 0.902664 0.902023 0.901352 0.900681 0.899979 0.899277
-0.898544 0.897812 0.897049 0.896286 0.895493 0.894699 0.893875 0.893051
-0.892197 0.891342 0.890457 0.889572 0.888687 0.887741 0.886826 0.88588
-0.884903 0.883926 0.882919 0.881912 0.880875 0.879837 0.878769 0.877701
-0.876633 0.875534 0.874405 0.873276 0.872116 0.870956 0.869766 0.868576
-0.867386 0.866165 0.864914 0.863663 0.862381 0.861099 0.859818 0.858505
-0.857162 0.85582 0.854477 0.853104 0.8517 0.850296 0.848892 0.847458
-0.845993 0.844528 0.843063 0.841568 0.840042 0.838547 0.83699 0.835434
-0.833878 0.832291 0.830704 0.829086 0.827438 0.82579 0.824142 0.822464
-0.820786 0.819077 0.817368 0.815628 0.813889 0.812119 0.810349 0.808548
-0.806747 0.804916 0.803085 0.801224 0.799362 0.797501 0.795578 0.793686
-0.791763 0.78981 0.787857 0.785904 0.78392 0.781906 0.779892 0.777878
-0.775833 0.773758 0.771683 0.769608 0.767502 0.765396 0.76326 0.761093
-0.758957 0.75676 0.754593 0.752365 0.750168 0.74791 0.745682 0.743393
-0.741135 0.738846 0.736526 0.734207 0.731857 0.729507 0.727158 0.724777
-0.722366 0.719955 0.717545 0.715103 0.712662 0.71019 0.707718 0.705215
-0.702713 0.70018 0.697647 0.695084 0.69252 0.689926 0.687332 0.684738
-0.682083 0.679459 0.676804 0.674149 0.671463 0.668747 0.666031 0.663315
-0.660568 0.657822 0.655045 0.652267 0.64946 0.646652 0.643845 0.641006
-0.638138 0.635269 0.632401 0.629501 0.626572 0.623642 0.620712 0.617752
-0.614792 0.611801 0.60881 0.60582 0.602768 0.599747 0.596695 0.593613
-0.59053 0.587448 0.584335 0.581223 0.578079 0.574936 0.571762 0.568588
-0.565384 0.56218 0.558975 0.55574 0.552505 0.54924 0.545944 0.542679
-0.539352 0.536057 0.5327 0.529373 0.526016 0.522629 0.519241 0.515854
-0.512436 0.509018 0.505569 0.502121 0.498642 0.495163 0.491684 0.488174
-0.484634 0.481094 0.477554 0.473984 0.470413 0.466812 0.463211 0.45961
-0.455978 0.452316 0.448654 0.444992 0.441299 0.437607 0.433914 0.430191
-0.426437 0.422684 0.41893 0.415146 0.411362 0.407547 0.403732 0.399887
-0.396042 0.392197 0.388321 0.384445 0.380539 0.376633 0.372696 0.368759
-0.364792 0.360855 0.356857 0.352859 0.348862 0.344864 0.340836 0.336777
-0.332718 0.328659 0.32457 0.32048 0.31636 0.312241 0.308121 0.30397
-0.29982 0.295639 0.291458 0.287247 0.283035 0.278824 0.274582 0.27034
-0.266068 0.261795 0.257492 0.253189 0.248886 0.244553 0.240219 0.235855
-0.231491 0.227127 0.222733 0.218338 0.213913 0.209488 0.205063 0.200607
-0.196121 0.191666 0.187149 0.182663 0.178146 0.17363 0.169083 0.164536
-0.159958 0.15538 0.150803 0.146194 0.141586 0.136948 0.132309 0.12767
-0.123001 0.118332 0.113632 0.108932 0.104233 0.0995026 0.0947723 0.0900116
-0.0852509 0.0804901 0.0756989 0.0709076 0.0660858 0.061264 0.0564423
-0.05159 0.0467377 0.0418549 0.036972 0.0320892 0.0271759 0.0222626
-0.0173492 0.0124054 0.00746155 0.00248718 -0.00248718 -0.00749207 -0.0124664
--0.0175018 -0.0225067 -0.0275421 -0.0325775 -0.0376434 -0.0427094 -0.0478058
--0.0529022 -0.0579987 -0.0630951 -0.068222 -0.0733795 -0.078537 -0.0836945
--0.0888519 -0.0940399 -0.0992279 -0.104446 -0.109665 -0.114883 -0.120132
--0.125381 -0.130661 -0.135941 -0.14122 -0.1465 -0.15181 -0.15715 -0.16246
--0.167801 -0.173172 -0.178513 -0.183914 -0.189285 -0.194687 -0.200089
--0.205521 -0.210953 -0.216385 -0.221848 -0.22731 -0.232773 -0.238266
--0.243759 -0.249252 -0.254776 -0.2603 -0.265854 -0.271408 -0.276962
--0.282516 -0.288101 -0.293716 -0.299301 -0.304916 -0.310532 -0.316177
--0.321823 -0.327469 -0.333145 -0.338821 -0.344528 -0.350204 -0.355911
--0.361649 -0.367355 -0.373123 -0.37886 -0.384628 -0.390396 -0.396164
--0.401962 -0.407761 -0.413589 -0.419388 -0.425217 -0.431076 -0.436935
--0.442795 -0.448654 -0.454544 -0.460434 -0.466324 -0.472244 -0.478165
--0.484116 -0.490036 -0.495987 -0.501968 -0.507919 -0.513901 -0.519913
--0.525894 -0.531906 -0.537949 -0.543961 -0.550003 -0.556046 -0.562119
--0.568192 -0.574265 -0.580368 -0.586441 -0.592575 -0.598679 -0.604813
--0.610947 -0.617081 -0.623245 -0.62941 -0.635574 -0.641769 -0.647964
--0.65416 -0.660355 -0.66658 -0.672806 -0.679062 -0.685287 -0.691544
--0.69783 -0.704086 -0.710373 -0.71666 -0.722977 -0.729294 -0.735611
--0.741928 -0.748276 -0.754623 -0.760971 -0.767349 -0.773727 -0.780106
--0.786484 -0.792892 -0.799301 -0.80571 -0.812149 -0.818558 -0.825027
--0.831467 -0.837936 -0.844406 -0.850876 -0.857346 -0.863846 -0.870346
--0.876877 -0.883377 -0.889908 -0.896439 -0.903 -0.909561 -0.916122
-0.916122 0.916092 0.916092;
+#A 0 -0.534799 -0.538556 -0.54228 -0.546038 -0.549762 -0.55352 -0.557244
+-0.560968 -0.564726 -0.56845 -0.572174 -0.575899 -0.579656 -0.58338
+-0.587105 -0.590829 -0.594553 -0.598278 -0.602002 -0.605726 -0.609417
+-0.613141 -0.616866 -0.62059 -0.624281 -0.628005 -0.631729 -0.63542
+-0.639145 -0.642836 -0.64656 -0.650251 -0.653942 -0.657666 -0.661357
+-0.665048 -0.668773 -0.672464 -0.676155 -0.679846 -0.683537 -0.687228
+-0.690919 -0.69461 -0.698301 -0.701992 -0.705683 -0.709341 -0.713032
+-0.716723 -0.720414 -0.724071 -0.727762 -0.73142 -0.735111 -0.738769
+-0.74246 -0.746118 -0.749809 -0.753467 -0.757124 -0.760815 -0.764473
+-0.768131 -0.771789 -0.775446 -0.779104 -0.782762 -0.78642 -0.790077
+-0.793735 -0.797393 -0.801051 -0.804708 -0.808366 -0.811991 -0.815649
+-0.819306 -0.822931 -0.826589 -0.830213 -0.833871 -0.837495 -0.841153
+-0.844778 -0.848435 -0.85206 -0.855684 -0.859309 -0.862967 -0.866591
+-0.870216 -0.87384 -0.877465 -0.881089 -0.884714 -0.888338 -0.891963
+-0.895587 -0.899212 -0.902803 -0.906428 -0.910052 -0.913677 -0.917268
+-0.920892 -0.924484 -0.928108 -0.9317 -0.935324 -0.938915 -0.94254
+-0.946131 -0.949722 -0.953314 -0.956938 -0.960529 -0.964121 -0.967712
+-0.971303 -0.974894 -0.978486 -0.982077 -0.985668 -0.989259 -0.992851
+-0.996442 -1 1 0.995744 0.991487 0.987231 0.982975 0.978718 0.974462
+0.970239 0.965983 0.961726 0.957503 0.953247 0.949024 0.944768 0.940545
+0.936288 0.932065 0.927842 0.923586 0.919363 0.91514 0.910917 0.906694
+0.902471 0.898214 0.894024 0.889801 0.885578 0.881355 0.877132 0.872909
+0.868686 0.864496 0.860273 0.856084 0.85186 0.847637 0.843448 0.839258
+0.835035 0.830845 0.826622 0.822432 0.818242 0.814052 0.809863 0.80564
+0.80145 0.79726 0.79307 0.78888 0.784724 0.780534 0.776344 0.772154
+0.767965 0.763808 0.759618 0.755428 0.751272 0.747082 0.742926 0.738736
+0.734579 0.730389 0.726233 0.722076 0.71792 0.71373 0.709573 0.705417
+0.70126 0.697104 0.692947 0.688791 0.684634 0.680477 0.676321 0.672198
+0.668041 0.663885 0.659728 0.655605 0.651448 0.647325 0.643168 0.639045
+0.634888 0.630765 0.626642 0.622485 0.618362 0.614239 0.610115 0.605959
+0.601835 0.597712 0.593589 0.589466 0.585342 0.581219 0.577129 0.573006
+0.568882 0.564759 0.560669 0.556546 0.552422 0.548332 0.544209 0.540119
+0.535996 0.531906 0.527816 0.523692 0.519602 0.515512 0.511422 0.507299
+0.503209 0.499119 0.495029 0.490939 0.486849 0.482759 0.478669 0.474612
+0.470522 0.466432 0.462342 0.458285 0.454195 0.450105 0.446048 0.441958
+0.437901 0.433811 0.429754 0.425697 0.421607 0.417551 0.413494 0.409437
+0.40538 0.40129 0.397233 0.393177 0.38912 0.385063 0.381039 0.376983
+0.372926 0.368869 0.364812 0.360789 0.356732 0.352675 0.348652 0.344595
+0.340571 0.336514 0.332491 0.328467 0.324411 0.320387 0.316364 0.312307
+0.308283 0.30426 0.300236 0.296213 0.292189 0.288165 0.284142 0.280118
+0.276095 0.272071 0.268081 0.264057 0.260034 0.256044 0.25202 0.247997
+0.244006 0.239983 0.235992 0.232002 0.227979 0.223988 0.219998 0.215974
+0.211984 0.207994 0.204004 0.200013 0.196023 0.192033 0.188042 0.184052
+0.180062 0.176072 0.172081 0.168091 0.164134 0.160144 0.156153 0.152196
+0.148206 0.144249 0.140259 0.136302 0.132311 0.128354 0.124397 0.120407
+0.11645 0.112493 0.108536 0.104579 0.100622 0.0966648 0.0926745 0.0887507
+0.0847937 0.0808366 0.0768796 0.0729226 0.0689655 0.0650417 0.0610847
+0.0571277 0.0532039 0.0492468 0.045323 0.041366 0.0374422 0.0334852
+0.0295614 0.0256044 0.0216806 0.0177568 0.013833 0.00990922 0.00595218
+0.0020284 -0.00189539 -0.00581917 -0.00974296 -0.0136667 -0.0175905
+-0.0214811 -0.0254048 -0.0293286 -0.0332524 -0.037143 -0.0410667 -0.0449905
+-0.0488811 -0.0528048 -0.0566954 -0.0606192 -0.0645097 -0.0684335 -0.072324
+-0.0762145 -0.0801051 -0.0840289 -0.0879194 -0.0918099 -0.0957005 -0.099591
+-0.103482 -0.107372 -0.111263 -0.115153 -0.119044 -0.122934 -0.126825
+-0.130682 -0.134573 -0.138463 -0.14232 -0.146211 -0.150068 -0.153959
+-0.157816 -0.161707 -0.165564 -0.169454 -0.173312 -0.177169 -0.181026
+-0.184917 -0.188774 -0.192631 -0.196489 -0.200346 -0.204203 -0.20806
+-0.211918 -0.215775 -0.219632 -0.223456 -0.227314 -0.231171 -0.235028
+-0.238852 -0.242709 -0.246533 -0.250391 -0.254215 -0.258072 -0.261896
+-0.265753 -0.269577 -0.273401 -0.277225 -0.281083 -0.284907 -0.288731
+-0.292555 -0.296379 -0.300203 -0.304027 -0.307851 -0.311675 -0.315499
+-0.319323 -0.323114 -0.326938 -0.330762 -0.334586 -0.338377 -0.342201
+-0.345991 -0.349815 -0.353606 -0.35743 -0.361221 -0.365045 -0.368836
+-0.372627 -0.376417 -0.380241 -0.384032 -0.387823 -0.391614 -0.395404
+-0.399195 -0.402986 -0.406777 -0.410568 -0.414358 -0.418116 -0.421907
+-0.425697 -0.429488 -0.433246 -0.437037 -0.440794 -0.444585 -0.448342
+-0.452133 -0.455891 -0.459681 -0.463439 -0.467196 -0.470987 -0.474745
+-0.478502 -0.48226 -0.486017 -0.489775 -0.493532 -0.49729 -0.501047
+-0.504805 -0.508563 -0.51232 -0.516078 -0.519835 -0.523559 -0.527317
+-0.531074 -0.534799 -0.538556 -0.54228;
 #X coords 0 1 514 -1 515 164 2 0 0;
-#X restore 368 250 graph;
+#X restore 399 234 graph;
 #N canvas 709 232 1095 981 internal_gui_links 0;
 #X obj -2 0 cnv 15 356 420 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
@@ -1778,50 +1734,6 @@ comes out incremented by the number of settings in that stage.;
 0;
 #X obj 98 100 cnv 15 154 80 empty empty Tuning 20 12 0 14 #c8fc6c #404040
 0;
-#N canvas 1143 969 341 363 fine_to_course 0;
-#X obj 47 72 sel -1200 1200;
-#X obj 47 99 t b b;
-#X obj 87 99 t b b;
-#X obj 87 182 f;
-#X obj 47 213 - 1;
-#X obj 87 213 + 1;
-#X obj 47 48 r cent_slider_s;
-#X obj 114 130 s cent_slider_reset;
-#X obj 128 99 s to_cent_dis;
-#X obj 47 182 f;
-#X obj 102 146 r course_from_DAW;
-#X obj 47 252 s course_from_DAW;
-#X connect 0 0 1 0;
-#X connect 0 1 2 0;
-#X connect 0 2 8 0;
-#X connect 1 0 9 0;
-#X connect 1 1 7 0;
-#X connect 2 0 3 0;
-#X connect 2 1 7 0;
-#X connect 3 0 5 0;
-#X connect 4 0 11 0;
-#X connect 5 0 11 0;
-#X connect 6 0 0 0;
-#X connect 9 0 4 0;
-#X connect 10 0 3 1;
-#X connect 10 0 9 1;
-#X restore 123 129 pd fine_to_course;
-#N canvas 920 957 425 267 offset_resets 0;
-#X msg 103 95 0;
-#X obj 103 60 r cent_slider_reset;
-#X msg 138 95 0;
-#X obj 51 60 loadbang;
-#X obj 138 121 s course_from_DAW;
-#X obj 37 121 s fine_from_DAW;
-#X obj 221 60 r offset_reset;
-#X connect 0 0 5 0;
-#X connect 1 0 0 0;
-#X connect 2 0 4 0;
-#X connect 3 0 0 0;
-#X connect 3 0 2 0;
-#X connect 6 0 0 0;
-#X connect 6 0 2 0;
-#X restore 123 151 pd offset_resets;
 #X obj 355 0 cnv 15 536 420 empty empty Waveform 20 12 0 14 #fce0c4
 #404040 0;
 #X obj 0 421 cnv 15 891 440 empty empty empty 20 12 0 14 #fcc4c4 #404040
@@ -2084,16 +1996,15 @@ lastbar timesig position, f 79;
 #X connect 2 0 1 0;
 #X connect 2 0 0 0;
 #X restore 29 237 pd filter_radio;
-#X connect 11 0 14 0;
-#X connect 12 0 13 0;
-#X connect 15 0 16 0;
+#X connect 9 0 12 0;
+#X connect 10 0 11 0;
+#X connect 13 0 14 0;
 #X restore 975 10 pd internal_gui_links;
 #X obj 610 23 ADSR_T_Graph;
 #X obj 716 23 r adsr_to_synth;
 #X obj 623 160 frequency_modulator_gui;
 #A saved 0 1700.79;
 #X obj 895 228 s modulation;
-#X obj 112 129 minimal_tuning_gui;
 #X obj 200 305 cnv 15 130 84 empty empty empty 20 12 0 14 #e0c4fc #404040
 0;
 #X obj 242 315 tgl 15 1 echo_on_off_toggle set_echo_on_off empty 17
@@ -2105,50 +2016,43 @@ empty -2 -8 0 10 #dfdfdf #000000 #000000 0 1;
 #X text 309 358 ms;
 #X text 310 338 %;
 #X text 210 314 Echo;
-#X text 1586 379 Did we get rid of the volume setting?;
 #X obj 368 23 ADSR_TV_gui;
 #X obj 638 87 s adsr_to_synth;
-#X text 1334 339 The synch frequency radios could be more clear...
-;
 #X obj 135 205 bng 15 250 50 0 btn_0_0 empty 0 17 7 0 10 #fcfcfc #000000
 #000000;
 #X text 28 398 QUIET!;
 #X floatatom 52 280 6 0 0 0 - - - 0;
 #X text 917 722 ^^^^;
-#X text 1334 300 Floatgrain implicitly introduces latency... maybe
-that should be reflected in the name? maybe it already is...;
 #N canvas 182 182 450 300 tuning_sends 0;
 #X obj 74 72 inlet;
 #X obj 70 159 s tuning_one;
 #X obj 150 159 s tuning_two;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
-#X restore 204 160 pd tuning_sends;
-#X text 1334 248 Velocity link to note-slide time would be good \,
-that way we could slide softer notes and create tension for the more
-stacato loud notes;
-#X text 1300 46 TODO:;
-#X text 1334 226 Remove pops and clicks going into the DAC object?
-;
-#X text 1301 163 MAYBE:;
-#X text 1334 182 Remove loadbangs and loadfloats on stuff that should
-be linked to the DAW \, might make it less ambiguous which values get
-loaded;
-#N canvas 461 338 327 300 tuning_receivers 0;
+#X restore 122 182 pd tuning_sends;
+#N canvas 461 338 867 556 tuning_receivers 0;
 #X obj 53 58 r fun_from_DAW;
 #X obj 103 81 r freq_attack_from_DAW;
-#X obj 152 104 r tpo_from_DAW;
+#X obj 162 104 r tpo_from_DAW;
 #X msg 53 81 fun \$1;
 #X obj 53 216 outlet;
-#X msg 152 127 tpo \$1;
+#X msg 162 127 tpo \$1;
 #X msg 103 104 slide \$1;
+#X obj 212 127 r course_from_DAW;
+#X msg 212 150 course \$1;
+#X obj 281 150 r fine_from_DAW;
+#X msg 281 173 fine \$1;
 #X connect 0 0 3 0;
 #X connect 1 0 6 0;
 #X connect 2 0 5 0;
 #X connect 3 0 4 0;
 #X connect 5 0 4 0;
 #X connect 6 0 4 0;
-#X restore 180 142 pd tuning_receivers;
+#X connect 7 0 8 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 10 0 4 0;
+#X restore 192 48 pd tuning_receivers;
 #N canvas 26 26 450 300 modulation_receivers 0;
 #X obj 51 211 outlet;
 #X msg 51 164 mod \$1;
@@ -2424,28 +2328,21 @@ loaded;
 #X connect 55 0 56 1;
 #X connect 56 0 57 0;
 #X restore 269 895 pd sinesum_receivers;
-#X text 1335 69 Preset settings aren't captured yet...;
 #X obj 812 750 credits_display;
-#X text 1374 464 Is this even true??;
 #X floatatom 1080 603 5 0 0 0 Param\ set \$0-param_set - 0;
 #X floatatom 1080 586 5 0 0 0 Param\ change \$0-param_change - 0;
 #X floatatom 1174 586 5 0 0 0 Param\ get camo_param_get_ID - 0;
 #X floatatom 1174 603 5 0 0 0 Get\ value camo_param_get_value - 0;
 #X floatatom 1030 657 5 0 0 0 TpO tpo_from_DAW - 0;
-#X text 1334 93 Sinesum setting seems to be correct;
-#X text 1335 119 Somehow the wave settings don't trigger the DAW at
-all...;
 #X floatatom 1030 623 5 0 0 0 Fun fun_from_DAW - 0;
 #X floatatom 1030 640 5 0 0 0 Att freq_attack_from_DAW - 0;
-#X obj 1101 126 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#X obj 1101 126 hradio 15 1 0 8 empty empty Test\\\ notes 0 -8 0 10
+#fcfcfc #000000 #000000 0;
 #X obj 1108 56 s camomile;
 #X text 1175 56 uncoupled for now;
 #X obj 1080 620 tgl 15 0 empty CamoIndexOutOfRange IndexOutOfRange
 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X floatatom 1030 678 5 0 0 0 Phase w_00_from_DAW - 0;
-#X text 1337 552 Mouse stuff doesn't work ??? so the param.change thing
-that checks if the mouse is down doesn't work either;
 #N canvas 52 52 2028 867 wb_settings 0;
 #X obj 37 45 inlet;
 #X obj 777 42 inlet;
@@ -2495,65 +2392,136 @@ that checks if the mouse is down doesn't work either;
 #X connect 21 1 11 0;
 #X restore 8 869 pd wb_settings;
 #X f 131;
-#X text 141 9 BPM;
+#X text 67 32 BPM;
 #X obj 262 6 bng 15 250 50 0 minimaximize_ui_panel empty All\\\ Options
 19 7 0 10 #fcfcfc #000000 #000000;
 #X text 817 707 I'm a crocodile;
-#X obj 1336 605 bng 15 250 50 0 show_hide_waves empty empty 17 7 0
+#N canvas 1321 723 450 300 testing_ground 0;
+#X obj 45 76 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X text 61 69 Mouse;
+#N canvas 1261 781 292 257 mouseReceive 0;
+#X obj 44 130 outlet;
+#X obj 44 38 r gui;
+#X obj 44 60 route mouse;
+#X msg 81 104 0;
+#X msg 44 104 1;
+#X obj 44 82 sel 1 0, f 13;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X connect 5 1 3 0;
+#X restore 45 48 pd mouseReceive;
+#X text 61 82 down;
+#X text 48 103 Mouse stuff doesn't work ??? so the param.change thing
+that checks if the mouse is down doesn't work either;
+#X connect 2 0 0 0;
+#X restore 1098 679 pd testing_ground;
+#N canvas 1671 239 625 771 comment_space 0;
+#X text 92 514 DAW settings are shared between instances so we should
+use those for tone \, that way we can make sure multiple instances
+sound good together;
+#X text 95 436 The synch frequency radios could be more clear...;
+#X text 95 397 Floatgrain implicitly introduces latency... maybe that
+should be reflected in the name? maybe it already is...;
+#X text 95 345 Velocity link to note-slide time would be good \, that
+way we could slide softer notes and create tension for the more stacato
+loud notes;
+#X text 61 53 TODO:;
+#X text 95 323 Remove pops and clicks going into the DAC object?;
+#X text 62 260 MAYBE:;
+#X text 95 279 Remove loadbangs and loadfloats on stuff that should
+be linked to the DAW \, might make it less ambiguous which values get
+loaded;
+#X text 96 76 Preset settings aren't captured yet...;
+#X text 135 561 Is this even true??;
+#X text 95 100 Sinesum setting seems to be correct;
+#X text 96 126 Somehow the wave settings don't trigger the DAW at all...
+;
+#X text 96 147 I think the stepwise loop adjustment setting is still
+broken... fixing it might improve performance...;
+#X text 97 180 Slider reset trickery doesn't work from the DAW. Point
+is we need to fix the course and fine gui;
+#X text 64 495 Questionable:;
+#X text 98 214 Wavefolding might be wrong \, it seems to run an abs
+on minimum turning it into a copy of the maximum...;
+#X restore 1103 653 pd comment_space;
+#N canvas 52 52 450 300 WIP_and_old 0;
+#X obj 71 204 bng 15 250 50 0 show_hide_waves_2 empty empty 17 7 0
 10 #fcfcfc #000000 #000000;
-#X obj 1336 680 bng 15 250 50 0 show_hide_waves empty empty 17 7 0
+#X text 87 203 Show/Hide WaveShaper;
+#X obj 211 204 bng 15 250 50 0 show_hide_waves_2 empty empty 17 7 0
 10 #fcfcfc #000000 #000000;
-#X text 1338 622 W;
-#X text 1338 632 A;
-#X text 1338 642 V;
-#X text 1338 652 E;
-#X text 1338 662 S;
-#X connect 25 0 22 0;
-#X connect 37 0 39 0;
-#X connect 37 1 39 1;
-#X connect 39 0 63 0;
-#X connect 39 1 63 1;
-#X connect 40 0 39 2;
-#X connect 40 1 39 3;
-#X connect 40 2 39 4;
-#X connect 42 0 44 0;
-#X connect 42 0 60 0;
-#X connect 42 0 69 0;
-#X connect 43 0 47 0;
-#X connect 43 0 61 0;
-#X connect 43 0 69 1;
-#X connect 47 0 46 0;
-#X connect 52 0 55 0;
-#X connect 52 1 56 0;
-#X connect 55 0 51 0;
-#X connect 55 0 59 0;
-#X connect 56 0 51 1;
-#X connect 56 0 59 0;
-#X connect 57 0 55 1;
-#X connect 57 0 56 1;
-#X connect 59 0 58 0;
-#X connect 63 0 73 0;
-#X connect 63 1 73 1;
-#X connect 64 0 63 2;
-#X connect 64 1 63 3;
-#X connect 67 0 37 0;
-#X connect 73 0 52 0;
-#X connect 73 1 52 1;
-#X connect 104 0 109 0;
-#X connect 105 0 163 0;
-#X connect 105 1 163 1;
-#X connect 105 2 163 2;
-#X connect 106 0 105 3;
-#X connect 109 0 105 2;
-#X connect 114 0 113 0;
-#X connect 115 0 116 0;
-#X connect 115 1 116 0;
-#X connect 117 0 134 0;
-#X connect 126 0 127 0;
-#X connect 140 0 117 0;
-#X connect 141 0 115 0;
-#X connect 142 0 126 0;
-#X connect 143 0 105 0;
-#X connect 144 0 105 1;
-#X connect 157 0 37 1;
-#X coords 0 0 1 1 356 420 1 0 0;
+#X obj 49 129 bng 15 250 50 0 show_hide_waves empty empty 17 7 0 10
+#fcfcfc #000000 #000000;
+#X obj 49 204 bng 15 250 50 0 show_hide_waves empty empty 17 7 0 10
+#fcfcfc #000000 #000000;
+#X text 51 146 W;
+#X text 51 156 A;
+#X text 51 166 V;
+#X text 51 176 E;
+#X text 51 186 S;
+#X obj 116 49 cnv 15 170 110 empty empty empty 20 12 0 14 #c4fcc4 #404040
+0;
+#X obj 125 85 cnv 15 152 74 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X text 135 87 Camomile by;
+#X text 136 100 Pierre Guillot;
+#X text 125 55 Pure Data by;
+#X text 126 68 Miller Puckette;
+#X obj 133 117 cnv 15 136 42 empty empty empty 20 12 0 14 #fcfcc4 #404040
+0;
+#X text 142 130 Koen Riksen;
+#X text 141 117 ToneBlock by;
+#X restore 1166 556 pd WIP_and_old;
+#X obj 122 66 tuning_gui;
+#X connect 23 0 25 0;
+#X connect 23 1 25 1;
+#X connect 25 0 49 0;
+#X connect 25 1 49 1;
+#X connect 26 0 25 2;
+#X connect 26 1 25 3;
+#X connect 26 2 25 4;
+#X connect 28 0 30 0;
+#X connect 28 0 46 0;
+#X connect 28 0 55 0;
+#X connect 29 0 33 0;
+#X connect 29 0 47 0;
+#X connect 29 0 55 1;
+#X connect 33 0 32 0;
+#X connect 38 0 41 0;
+#X connect 38 1 42 0;
+#X connect 41 0 37 0;
+#X connect 41 0 45 0;
+#X connect 42 0 37 1;
+#X connect 42 0 45 0;
+#X connect 43 0 41 1;
+#X connect 43 0 42 1;
+#X connect 45 0 44 0;
+#X connect 49 0 59 0;
+#X connect 49 1 59 1;
+#X connect 50 0 49 2;
+#X connect 50 1 49 3;
+#X connect 53 0 23 0;
+#X connect 59 0 38 0;
+#X connect 59 1 38 1;
+#X connect 87 0 90 0;
+#X connect 88 0 130 0;
+#X connect 88 1 130 1;
+#X connect 88 2 130 2;
+#X connect 89 0 88 3;
+#X connect 90 0 88 2;
+#X connect 95 0 94 0;
+#X connect 96 0 97 0;
+#X connect 96 1 97 0;
+#X connect 105 0 106 0;
+#X connect 112 0 137 0;
+#X connect 113 0 96 0;
+#X connect 114 0 105 0;
+#X connect 115 0 88 0;
+#X connect 116 0 88 1;
+#X connect 125 0 23 1;
+#X connect 137 0 111 0;
+#X coords 0 0 1 1 356 420 2 0 0;

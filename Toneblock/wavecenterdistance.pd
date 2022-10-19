@@ -2,10 +2,10 @@
 #X obj 75 32 inlet;
 #X obj 75 93 t f f;
 #X obj 75 224 outlet;
-#X obj 120 72 inlet;
+#X obj 132 72 inlet;
 #X obj 75 53 t f f;
 #X obj 102 127 destabalize;
-#X obj 75 163 angulate;
+#X obj 75 163 mix, f 10;
 #X connect 0 0 4 0;
 #X connect 1 0 6 0;
 #X connect 1 1 5 0;
