@@ -1,4 +1,4 @@
-#N canvas 557 424 1318 792 10;
+#N canvas 761 377 1318 792 10;
 #N canvas 297 465 1386 789 wavetree_controls 0;
 #X obj 527 138 outlet;
 #X obj 176 158 hsl 128 15 0.1 10 1 0 \$0-lensing \$0-set_lensing empty
@@ -904,45 +904,16 @@ polarity folding ceiling reverse bitcrush bitcrush_bits normalize remove_dc
 0.296194 0.284677 0.27312 0.261524 0.249892 0.238223 0.226521 0.214787
 0.203023 0.19123 0.179409 0.167564 0.155694 0.143803 0.131891 0.119961
 0.108013 0.0960505 0.0840743 0.0720861 0.0600878 0.0480809 0.0360673
-0.0240486 0.0120264 2.60003e-06 -0.0120212 -0.0240434 -0.0360621 -0.0480758
--0.0600826 -0.0720809 -0.0840691 -0.0960454 -0.108008 -0.119955 -0.131886
--0.143798 -0.155689 -0.167559 -0.179404 -0.191225 -0.203018 -0.214782
--0.226516 -0.238218 -0.249887 -0.261519 -0.273115 -0.284672 -0.296189
--0.307664 -0.319095 -0.330481 -0.341819 -0.35311 -0.36435 -0.375538
--0.386674 -0.397754 -0.408777 -0.419743 -0.430648 -0.441493 -0.452274
--0.462992 -0.473643 -0.484226 -0.494741 -0.505185 -0.515557 -0.525855
--0.536079 -0.546225 -0.556294 -0.566283 -0.576191 -0.586016 -0.595758
--0.605414 -0.614983 -0.624465 -0.633856 -0.643157 -0.652365 -0.661479
--0.670499 -0.679421 -0.688246 -0.696972 -0.705598 -0.714121 -0.722542
--0.730859 -0.739069 -0.747173 -0.755169 -0.763056 -0.770832 -0.778496
--0.786048 -0.793486 -0.800808 -0.808014 -0.815103 -0.822073 -0.828924
--0.835653 -0.842261 -0.848747 -0.855108 -0.861345 -0.867455 -0.873439
--0.879295 -0.885023 -0.890621 -0.896088 -0.901423 -0.906627 -0.911697
--0.916633 -0.921435 -0.9261 -0.93063 -0.935022 -0.939276 -0.943391
--0.947367 -0.951203 -0.954898 -0.958452 -0.961864 -0.965133 -0.968259
--0.971242 -0.974079 -0.976772 -0.97932 -0.981722 -0.983977 -0.986086
--0.988048 -0.989862 -0.991527 -0.993045 -0.994414 -0.995634 -0.996705
--0.997626 -0.998397 -0.999019 -0.99949 -0.99981 -0.999981 -1 -0.999869
--0.999586 -0.999153 -0.998569 -0.997833 -0.996947 -0.99591 -0.994721
--0.993382 -0.991892 -0.990251 -0.98846 -0.986518 -0.984426 -0.982184
--0.979793 -0.977252 -0.974561 -0.971722 -0.968735 -0.965599 -0.962315
--0.958884 -0.955305 -0.951581 -0.94771 -0.943693 -0.939532 -0.935226
--0.930776 -0.926182 -0.921446 -0.916568 -0.911548 -0.906388 -0.901088
--0.895648 -0.890069 -0.884353 -0.8785 -0.87251 -0.866386 -0.860127
--0.853734 -0.847209 -0.840552 -0.833764 -0.826846 -0.8198 -0.812626
--0.805325 -0.797898 -0.790347 -0.782673 -0.774876 -0.766958 -0.75892
--0.750764 -0.74249 -0.734099 -0.725594 -0.716974 -0.708242 -0.699399
--0.690446 -0.681385 -0.672217 -0.662943 -0.653564 -0.644083 -0.6345
--0.624817 -0.615036 -0.605158 -0.595184 -0.585117 -0.574957 -0.564706
--0.554366 -0.543939 -0.533425 -0.522827 -0.512146 -0.501385 -0.490544
--0.479625 -0.46863 -0.457561 -0.44642 -0.435207 -0.423926 -0.412577
--0.401163 -0.389685 -0.378146 -0.366546 -0.354888 -0.343174 -0.331405
--0.319583 -0.307711 -0.295789 -0.283821 -0.271807 -0.25975 -0.247652
--0.235515 -0.22334 -0.211129 -0.198885 -0.186609 -0.174303 -0.161969
--0.14961 -0.137227 -0.124822 -0.112397 -0.0999544 -0.0874957 -0.075023
--0.0625383 -0.0500437 -0.0375411 -0.0250326 -0.01252 -5.4123e-06 0.0125092
-;
-#X coords 0 1.2 514 -1.2 312 125 1 0 0;
+0.0240486 0.0120264 2.60003e-06 -0.0120212 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0;
+#X coords 0 1 514 -1 312 125 1 0 0;
 #X restore 480 0 graph;
 #N canvas 811 679 905 536 canvas_control 0;
 #X obj 141 63 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1021,7 +992,7 @@ args;
 #X obj 242 388 r sine_factor_slider_out;
 #X obj 27 492 s sine_partial_radio_out;
 #X obj 670 503 r sine_partial_radio_out;
-#X obj 0 -31 r sine_radio_in;
+#X obj 0 -25 r sine_radio_in;
 #X obj 242 442 min 100;
 #X obj 717 532 r \$0-array_name_sines;
 #X obj 293 4 bng 15 250 50 0 \$0-sinesum_reset empty Reset -34 8 0
@@ -1119,7 +1090,7 @@ args;
 #X connect 6 0 0 1;
 #X connect 7 0 3 1;
 #X restore 624 561 pd normal_writer;
-#X obj 489 -31 inlet;
+#X obj 489 -61 inlet;
 #X obj 624 52 route preset;
 #X obj 624 253 t b f b;
 #X obj 624 401 s sinesum_updated;
@@ -1272,11 +1243,10 @@ Even\\\ Partials 16 -8 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 432 -119 inlet;
 #X text 469 -119 Arrayname;
 #X obj 432 -91 s \$0-array_name_main;
-#N canvas 1258 489 956 705 wave_writer 1;
-#X obj 406 397 r \$0-array_name_main;
+#N canvas 1258 489 911 709 wave_writer 0;
 #X msg 400 464 \; \$1 normalize 1;
 #X obj 400 443 symbol;
-#X obj 333 145 r \$0-array_name_main;
+#X obj 379 347 r \$0-array_name_main;
 #X obj 406 419 t s s;
 #X obj 62 35 inlet;
 #N canvas 0 50 450 250 (subpatch) 0;
@@ -1304,7 +1274,7 @@ Even\\\ Partials 16 -8 0 12 #fcfcfc #000000 #000000 0 1;
 0 0 0 0 0 0 0 0;
 #X coords 0 1 515 -1 200 140 1 0 0;
 #X restore 319 523 graph;
-#N canvas 933 771 717 505 clonedwriters 1;
+#N canvas 933 771 717 505 clonedwriters 0;
 #X obj 28 294 clone tabwriter.cl 515;
 #X obj 28 38 inlet;
 #X obj 181 38 inlet;
@@ -1370,21 +1340,21 @@ Even\\\ Partials 16 -8 0 12 #fcfcfc #000000 #000000 0 1;
 #X restore 208 467 pd clonedwriters;
 #X obj 301 443 makefilename %s;
 #X obj 239 34 inlet;
-#X obj 522 34 inlet;
+#X obj 432 34 inlet;
 #X obj 341 275 s \$0-preset_ui_settings;
 #X obj 188 251 wave_shaper, f 26;
-#X text 522 17 steps;
+#X text 432 17 steps;
 #X text 216 17 line time;
 #X text 62 18 Shaper args;
 #X obj 101 110 route normalize;
 #X obj 101 133 route bang;
-#X text 539 236 First point and the last two points are guard points!
+#X text 529 236 First point and the last two points are guard points!
 ;
-#X text 557 257 The 2^n waveform points start at 1;
+#X text 547 257 The 2^n waveform points start at 1;
 #X obj 239 61 route writecycle pointslide, f 28;
 #X msg 239 145 writecycle \$1;
-#X obj 522 124 route cyclesteps pointsteps;
-#X msg 522 147 cyclesteps \$1;
+#X obj 432 124 route cyclesteps pointsteps;
+#X msg 432 147 cyclesteps \$1;
 #X obj 132 166 t f f;
 #X msg 132 210 normalize \$1;
 #X obj 122 299 t a a;
@@ -1440,83 +1410,84 @@ Even\\\ Partials 16 -8 0 12 #fcfcfc #000000 #000000 0 1;
 #X connect 19 0 17 0;
 #X connect 19 0 18 0;
 #X restore 302 406 pd analytics;
-#X obj 333 215 t f f;
-#X obj 333 166 t b s s;
+#X obj 371 222 t f f;
 #X obj 302 380 pipe 36;
 #X obj 239 124 addlet 20, f 14;
 #X obj 62 412 s sine_partial;
-#X obj 62 380 sinesum_shaper branchwave_temp2 1;
 #X text 324 670 Backup array for the sinesum shaper;
 #X text 84 670 Backup array for the clonedwriters;
-#N canvas 208 208 486 300 sineshaper_routing 0;
+#N canvas 208 208 570 300 sineshaper_routing 0;
 #X obj 41 65 inlet;
 #X obj 41 211 outlet;
-#X obj 398 211 outlet;
-#X msg 183 152 half_0 \$1;
+#X obj 470 211 outlet;
+#X msg 184 152 half_0 \$1;
 #X msg 255 152 half_1 \$1;
+#X msg 327 152 half_chrom \$1;
+#X msg 398 181 points \$1;
 #X obj 41 125 route get_sine_partial sine_partial half_0 half_1 half_chrom
-;
-#X msg 326 152 half_chrom \$1;
-#X connect 0 0 5 0;
+sine_points, f 72;
+#X connect 0 0 7 0;
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
 #X connect 5 0 1 0;
-#X connect 5 1 1 0;
-#X connect 5 2 3 0;
-#X connect 5 3 4 0;
-#X connect 5 4 6 0;
-#X connect 5 5 2 0;
 #X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 7 1 1 0;
+#X connect 7 2 3 0;
+#X connect 7 3 4 0;
+#X connect 7 4 5 0;
+#X connect 7 5 6 0;
+#X connect 7 6 2 0;
 #X restore 62 77 pd sineshaper_routing;
 #X obj 239 84 t f f;
-#X text 545 439 The clonedwriters should probably be named after those
+#X text 535 439 The clonedwriters should probably be named after those
 famous fountains \, lol;
-#X obj 333 192 array size branchwave_temp;
-#X connect 0 0 4 0;
-#X connect 2 0 1 0;
-#X connect 3 0 31 0;
-#X connect 4 0 10 0;
-#X connect 4 1 2 1;
-#X connect 5 0 38 0;
-#X connect 7 0 28 0;
-#X connect 10 0 9 5;
-#X connect 11 0 22 0;
-#X connect 12 0 24 0;
-#X connect 14 0 9 0;
-#X connect 14 1 9 1;
-#X connect 14 2 9 2;
-#X connect 14 3 32 0;
-#X connect 14 4 13 0;
-#X connect 18 0 19 0;
-#X connect 18 1 14 0;
-#X connect 19 0 2 0;
-#X connect 19 1 26 0;
-#X connect 22 0 39 0;
-#X connect 22 1 33 1;
-#X connect 23 0 14 1;
-#X connect 24 0 25 0;
-#X connect 24 1 9 4;
-#X connect 25 0 14 1;
-#X connect 26 0 27 0;
-#X connect 26 1 35 1;
-#X connect 27 0 14 0;
-#X connect 28 0 14 3;
-#X connect 28 1 35 3;
-#X connect 30 0 29 2;
-#X connect 30 1 14 2;
-#X connect 31 0 41 0;
-#X connect 31 1 41 1;
-#X connect 31 2 29 1;
-#X connect 32 0 29 0;
-#X connect 33 0 23 0;
-#X connect 33 1 32 1;
-#X connect 33 2 9 3;
-#X connect 35 0 34 0;
-#X connect 38 0 35 0;
-#X connect 38 1 18 0;
-#X connect 39 0 35 2;
-#X connect 39 1 33 0;
-#X connect 41 0 30 0;
+#X obj 371 197 r \$0-array_size_main;
+#X obj 379 370 t s s;
+#X obj 62 380 sinesum_shaper branchwave_temp2 512 1;
+#X connect 1 0 0 0;
+#X connect 2 0 39 0;
+#X connect 3 0 9 0;
+#X connect 3 1 1 1;
+#X connect 4 0 35 0;
+#X connect 6 0 27 0;
+#X connect 9 0 8 5;
+#X connect 10 0 21 0;
+#X connect 11 0 23 0;
+#X connect 13 0 8 0;
+#X connect 13 1 8 1;
+#X connect 13 2 8 2;
+#X connect 13 3 30 0;
+#X connect 13 4 12 0;
+#X connect 17 0 18 0;
+#X connect 17 1 13 0;
+#X connect 18 0 1 0;
+#X connect 18 1 25 0;
+#X connect 21 0 36 0;
+#X connect 21 1 31 1;
+#X connect 22 0 13 1;
+#X connect 23 0 24 0;
+#X connect 23 1 8 4;
+#X connect 24 0 13 1;
+#X connect 25 0 26 0;
+#X connect 25 1 40 1;
+#X connect 26 0 13 0;
+#X connect 27 0 13 3;
+#X connect 27 1 40 3;
+#X connect 29 0 28 2;
+#X connect 29 1 13 2;
+#X connect 30 0 28 0;
+#X connect 31 0 22 0;
+#X connect 31 1 30 1;
+#X connect 31 2 8 3;
+#X connect 35 0 40 0;
+#X connect 35 1 17 0;
+#X connect 36 0 40 2;
+#X connect 36 1 31 0;
+#X connect 38 0 29 0;
+#X connect 39 0 28 1;
+#X connect 39 1 3 0;
+#X connect 40 0 32 0;
 #X restore 229 503 pd wave_writer;
 #X text 665 419 Scroll up for inlets;
 #X obj 627 -75 makefilename \$0-waveTreeLeaf;
@@ -1638,17 +1609,21 @@ famous fountains \, lol;
 #X obj 212 -32 r \$0-preset_ui_settings;
 #X obj 366 -32 r \$0-mind_the_gap;
 #N canvas 338 338 450 300 sinesum_ui_link 0;
-#X obj 57 200 outlet;
+#X obj 57 240 outlet;
 #X obj 57 57 r sinesum_updated;
 #X obj 132 141 r get_sine_partial;
 #X obj 102 88 r sinefactor_partial;
 #X msg 132 165 get_sine_partial \$1;
 #X msg 102 112 sine_partial \$1 \$2;
+#X obj 269 165 r \$0-new_sinesum_calc_size;
+#X msg 269 188 sine_points \$1;
 #X connect 1 0 0 0;
 #X connect 2 0 4 0;
 #X connect 3 0 5 0;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
 #X restore 229 420 pd sinesum_ui_link;
 #N canvas 52 52 450 300 cross_ui_messaging 0;
 #X obj 133 185 outlet;
@@ -1666,31 +1641,6 @@ famous fountains \, lol;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 804 107 pd cross_ui_receiver;
-#N canvas 1064 801 692 384 array_markers 0;
-#X obj 189 129 / 60;
-#X msg 189 153 xticks 0 \$1 5;
-#X obj 189 24 inlet;
-#X text 182 5 Array name;
-#X obj 189 50 t b b s s s;
-#X obj 189 264 s;
-#X obj 69 264 s;
-#X msg 69 153 yticks 0 1 1;
-#X obj 189 98 array size branchwave_temp;
-#X connect 0 0 1 0;
-#X connect 1 0 5 0;
-#X connect 1 0 6 0;
-#X connect 2 0 4 0;
-#X connect 4 0 8 0;
-#X connect 4 1 7 0;
-#X connect 4 2 6 1;
-#X connect 4 3 5 1;
-#X connect 4 4 8 1;
-#X connect 7 0 5 0;
-#X connect 7 0 6 0;
-#X connect 8 0 0 0;
-#X restore 815 -51 pd array_markers;
-#X text 921 -52 Ticks;
-#X obj 815 -75 r \$0-array_name_sines;
 #X obj 143 475 t a a;
 #X obj 143 560 outlet;
 #X obj 633 560 outlet;
@@ -1723,9 +1673,70 @@ famous fountains \, lol;
 #X obj 275 -119 inlet;
 #X text 312 -118 Sine ettings;
 #X obj 480 560 outlet;
+#X obj 830 -107 r \$0-array_name_main;
+#X obj 830 -60 array size;
+#X obj 830 -37 s \$0-array_size_main;
+#X obj 830 -84 t b s;
+#N canvas 910 452 794 519 sinesum_array_resolution 0;
+#N canvas 1422 770 692 384 array_markers 0;
+#X obj 189 149 / 60;
+#X msg 189 173 xticks 0 \$1 5;
+#X obj 189 24 inlet;
+#X text 182 5 Array name;
+#X obj 189 284 s;
+#X obj 69 284 s;
+#X msg 69 173 yticks 0 1 1;
+#X obj 189 118 array size branchwave_temp;
+#X obj 358 24 inlet;
+#X text 351 5 Size update;
+#X obj 358 118 spigot 0;
+#X msg 403 102 1;
+#X obj 189 50 t b b s s s b;
+#X text 366 70 can't update untill we set the array name;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 1 0 4 0;
+#X connect 2 0 12 0;
+#X connect 6 0 5 0;
+#X connect 6 0 4 0;
+#X connect 7 0 0 0;
+#X connect 8 0 10 0;
+#X connect 10 0 0 0;
+#X connect 11 0 10 1;
+#X connect 12 0 7 0;
+#X connect 12 1 6 0;
+#X connect 12 2 5 1;
+#X connect 12 3 4 1;
+#X connect 12 4 7 1;
+#X connect 12 5 11 0;
+#X restore 44 375 pd array_markers;
+#X obj 44 351 r \$0-array_name_sines;
+#X obj 137 64 r \$0-array_size_main;
+#X obj 176 351 dynamic_array_window \$0-waveTreeLeaf 515;
+#X obj 156 375 dynamic_array_size \$0-waveTreeLeaf 515;
+#X obj 137 98 f 515;
+#X obj 137 121 change 515;
+#X obj 137 327 t f f f;
+#X obj 137 167 t f f;
+#X obj 137 245 s \$0-new_sinesum_array_size;
+#X obj 137 273 r \$0-new_sinesum_array_size;
+#X obj 314 245 s \$0-new_sinesum_calc_size;
+#X obj 314 217 - 3;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 0 1;
+#X connect 7 1 4 0;
+#X connect 7 2 3 0;
+#X connect 8 0 9 0;
+#X connect 8 1 12 0;
+#X connect 10 0 7 0;
+#X connect 12 0 11 0;
+#X restore 830 -6 pd sinesum_array_resolution;
 #X connect 0 0 30 0;
-#X connect 3 0 38 0;
-#X connect 3 1 39 0;
+#X connect 3 0 35 0;
+#X connect 3 1 36 0;
 #X connect 4 0 13 0;
 #X connect 6 0 5 0;
 #X connect 8 0 10 0;
@@ -1737,15 +1748,18 @@ famous fountains \, lol;
 #X connect 27 0 0 1;
 #X connect 28 0 0 2;
 #X connect 29 0 11 0;
-#X connect 30 0 35 0;
+#X connect 30 0 32 0;
 #X connect 31 0 3 0;
-#X connect 34 0 32 0;
+#X connect 32 0 33 0;
+#X connect 32 1 11 0;
 #X connect 35 0 36 0;
 #X connect 35 1 11 0;
-#X connect 38 0 39 0;
-#X connect 38 1 11 0;
-#X connect 39 0 44 0;
-#X connect 39 1 37 0;
-#X connect 40 0 0 0;
-#X connect 42 0 3 0;
+#X connect 36 0 41 0;
+#X connect 36 1 34 0;
+#X connect 37 0 0 0;
+#X connect 39 0 3 0;
+#X connect 42 0 45 0;
+#X connect 43 0 44 0;
+#X connect 45 0 43 0;
+#X connect 45 1 43 1;
 #X coords 0 0 1 1 792 400 2 0 0;
