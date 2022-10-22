@@ -1,0 +1,32 @@
+#N canvas 130 130 450 426 12;
+#X floatatom 38 271 5 0 0 0 - - - 0;
+#X floatatom 209 10 5 0 0 0 - - - 0;
+#X obj 207 110 list;
+#X obj 209 50 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 207 84 rabbit cat;
+#X msg 206 143 symbol cat;
+#X obj 38 226 route_by_type;
+#X listbox 104 271 20 0 0 0 - - - 0;
+#X obj 82 304 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 60 324 set \$1;
+#X msg 206 178 some_other_message;
+#X msg 126 352 set \$1;
+#X obj 126 324 symbol;
+#X msg 60 350;
+#X msg 126 378;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 6 1 9 0;
+#X connect 6 2 8 0;
+#X connect 6 3 7 0;
+#X connect 6 4 12 0;
+#X connect 9 0 13 0;
+#X connect 10 0 6 0;
+#X connect 11 0 14 0;
+#X connect 12 0 11 0;
