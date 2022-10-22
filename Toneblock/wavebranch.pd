@@ -871,49 +871,17 @@ polarity folding ceiling reverse bitcrush bitcrush_bits normalize remove_dc
 #X coords 0 -1 1 1 480 340 2 0 0;
 #X restore 0 0 pd wavetree_controls;
 #N canvas 286 286 450 250 (subpatch) 0;
-#X array \$0-waveTreeLeaf 515 float 1;
-#A 0 -0.0125146 0 0.0125146 0.0250271 0.0375357 0.0500383 0.0625329
-0.0750176 0.0874903 0.099949 0.112392 0.124817 0.137222 0.149605 0.161964
-0.174298 0.186603 0.198879 0.211124 0.223334 0.235509 0.247647 0.259745
-0.271802 0.283816 0.295784 0.307705 0.319578 0.3314 0.343168 0.354883
-0.366541 0.378141 0.38968 0.401158 0.412572 0.423921 0.435202 0.446415
-0.457556 0.468625 0.47962 0.490539 0.50138 0.512142 0.522822 0.53342
-0.543934 0.554362 0.564702 0.574952 0.585112 0.59518 0.605154 0.615032
-0.624813 0.634496 0.644079 0.65356 0.662938 0.672213 0.681381 0.690443
-0.699395 0.708239 0.71697 0.72559 0.734095 0.742486 0.75076 0.758917
-0.766955 0.774873 0.782669 0.790344 0.797895 0.805322 0.812622 0.819797
-0.826843 0.833761 0.840549 0.847206 0.853731 0.860124 0.866383 0.872508
-0.878497 0.884351 0.890067 0.895645 0.901085 0.906386 0.911546 0.916566
-0.921444 0.92618 0.930774 0.935224 0.93953 0.943692 0.947708 0.951579
-0.955304 0.958882 0.962313 0.965597 0.968733 0.971721 0.97456 0.977251
-0.979792 0.982183 0.984425 0.986517 0.988459 0.99025 0.991891 0.993381
-0.994721 0.995909 0.996947 0.997833 0.998568 0.999153 0.999586 0.999869
-1 0.999981 0.999811 0.99949 0.999019 0.998398 0.997626 0.996705 0.995635
-0.994415 0.993046 0.991528 0.989862 0.988048 0.986087 0.983978 0.981723
-0.979321 0.976774 0.974081 0.971243 0.968261 0.965135 0.961866 0.958454
-0.9549 0.951205 0.947369 0.943393 0.939278 0.935023 0.930632 0.926102
-0.921437 0.916635 0.911699 0.906629 0.901426 0.89609 0.890623 0.885025
-0.879298 0.873442 0.867458 0.861347 0.855111 0.848749 0.842264 0.835656
-0.828927 0.822076 0.815106 0.808017 0.800811 0.793489 0.786051 0.7785
-0.770835 0.763059 0.755173 0.747177 0.739073 0.730862 0.722546 0.714125
-0.705601 0.696976 0.68825 0.679425 0.670502 0.661483 0.652369 0.643161
-0.63386 0.624469 0.614987 0.605418 0.595762 0.58602 0.576195 0.566287
-0.556298 0.54623 0.536083 0.52586 0.515562 0.50519 0.494746 0.484231
-0.473647 0.462996 0.452279 0.441498 0.430653 0.419747 0.408782 0.397758
-0.386678 0.375543 0.364355 0.353115 0.341824 0.330485 0.3191 0.307669
-0.296194 0.284677 0.27312 0.261524 0.249892 0.238223 0.226521 0.214787
-0.203023 0.19123 0.179409 0.167564 0.155694 0.143803 0.131891 0.119961
-0.108013 0.0960505 0.0840743 0.0720861 0.0600878 0.0480809 0.0360673
-0.0240486 0.0120264 2.60003e-06 -0.0120212 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0;
-#X coords 0 1 514 -1 312 125 1 0 0;
+#X array \$0-waveTreeLeaf 67 float 1;
+#A 0 -0.677646 0 0.677646 0.999994 0.949303 0.801485 0.787273 0.879268
+0.919703 0.863121 0.810904 0.839658 0.895307 0.890416 0.838127 0.823171
+0.867331 0.898841 0.867332 0.823172 0.838126 0.890415 0.895308 0.83966
+0.810904 0.863119 0.919702 0.879271 0.787275 0.801482 0.949299 0.999997
+0.67766 2.03232e-05 -0.677631 -0.999991 -0.949307 -0.801488 -0.787271
+-0.879266 -0.919703 -0.863123 -0.810905 -0.839657 -0.895306 -0.890417
+-0.838129 -0.823171 -0.867329 -0.898841 -0.867334 -0.823173 -0.838125
+-0.890414 -0.895309 -0.839662 -0.810904 -0.863117 -0.919702 -0.879273
+-0.787276 -0.80148 -0.949294 -1 -0.677675 -4.06464e-05 0.677617;
+#X coords 0 1 66 -1 312 125 1 0 0;
 #X restore 480 0 graph;
 #N canvas 811 679 905 536 canvas_control 0;
 #X obj 141 63 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -1243,7 +1211,7 @@ Even\\\ Partials 16 -8 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 432 -119 inlet;
 #X text 469 -119 Arrayname;
 #X obj 432 -91 s \$0-array_name_main;
-#N canvas 1258 489 911 709 wave_writer 0;
+#N canvas 992 377 974 796 wave_writer 0;
 #X msg 400 464 \; \$1 normalize 1;
 #X obj 400 443 symbol;
 #X obj 379 347 r \$0-array_name_main;
@@ -1274,70 +1242,6 @@ Even\\\ Partials 16 -8 0 12 #fcfcfc #000000 #000000 0 1;
 0 0 0 0 0 0 0 0;
 #X coords 0 1 515 -1 200 140 1 0 0;
 #X restore 319 523 graph;
-#N canvas 933 771 717 505 clonedwriters 0;
-#X obj 28 294 clone tabwriter.cl 515;
-#X obj 28 38 inlet;
-#X obj 181 38 inlet;
-#X obj 224 38 inlet;
-#X text 281 21 array;
-#X obj 281 38 inlet;
-#X msg 28 235 this \$1;
-#X msg 85 235 set \$1;
-#X obj 85 38 inlet;
-#X text 83 22 Point #;
-#X text 26 22 Signal;
-#X msg 156 271 all set \$1;
-#X msg 143 231 all \$1;
-#X msg 151 251 all \$1;
-#X text 224 22 steps;
-#X obj 181 67 t f f;
-#X obj 208 129 / 3;
-#X text 235 129 convert steps to grain time;
-#X obj 224 67 t b f;
-#N canvas 78 78 450 300 writers_help 0;
-#X text 63 64 Signal;
-#X text 108 64 Factor;
-#X text 159 64 time;
-#X text 194 64 grain;
-#X text 66 44 Inlets:;
-#X text 235 64 arrayname;
-#X restore 172 294 pd writers_help;
-#X obj 138 38 inlet;
-#X text 132 22 factor;
-#X text 187 22 time;
-#X msg 60 152 all \$1 \$2;
-#X obj 60 125 route list;
-#X msg 78 177 all \$1;
-#X obj 139 344 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 139 364 pack f f;
-#X floatatom 184 343 5 0 0 0 - - - 0;
-#X msg 139 387 vis \$2 \$1;
-#X text 88 320 open or close specific writer;
-#X connect 1 0 6 0;
-#X connect 2 0 15 0;
-#X connect 3 0 18 0;
-#X connect 5 0 11 0;
-#X connect 6 0 0 0;
-#X connect 7 0 0 0;
-#X connect 8 0 7 0;
-#X connect 11 0 0 4;
-#X connect 12 0 0 2;
-#X connect 13 0 0 3;
-#X connect 15 0 12 0;
-#X connect 15 1 16 0;
-#X connect 16 0 13 0;
-#X connect 18 0 16 0;
-#X connect 18 1 16 1;
-#X connect 20 0 24 0;
-#X connect 23 0 0 1;
-#X connect 24 0 23 0;
-#X connect 24 1 25 0;
-#X connect 26 0 27 0;
-#X connect 27 0 29 0;
-#X connect 28 0 27 1;
-#X connect 29 0 0 0;
-#X restore 208 467 pd clonedwriters;
 #X obj 301 443 makefilename %s;
 #X obj 239 34 inlet;
 #X obj 432 34 inlet;
@@ -1445,49 +1349,52 @@ famous fountains \, lol;
 #X obj 371 197 r \$0-array_size_main;
 #X obj 379 370 t s s;
 #X obj 62 380 sinesum_shaper branchwave_temp2 512 1;
+#X obj 209 466 wave_writer_515, f 19;
+#X obj 209 489 r \$0-array_size_main_log2;
 #X connect 1 0 0 0;
-#X connect 2 0 39 0;
-#X connect 3 0 9 0;
+#X connect 2 0 38 0;
+#X connect 3 0 8 0;
 #X connect 3 1 1 1;
-#X connect 4 0 35 0;
-#X connect 6 0 27 0;
-#X connect 9 0 8 5;
-#X connect 10 0 21 0;
-#X connect 11 0 23 0;
-#X connect 13 0 8 0;
-#X connect 13 1 8 1;
-#X connect 13 2 8 2;
-#X connect 13 3 30 0;
-#X connect 13 4 12 0;
-#X connect 17 0 18 0;
-#X connect 17 1 13 0;
-#X connect 18 0 1 0;
-#X connect 18 1 25 0;
-#X connect 21 0 36 0;
-#X connect 21 1 31 1;
-#X connect 22 0 13 1;
-#X connect 23 0 24 0;
-#X connect 23 1 8 4;
-#X connect 24 0 13 1;
-#X connect 25 0 26 0;
-#X connect 25 1 40 1;
-#X connect 26 0 13 0;
-#X connect 27 0 13 3;
-#X connect 27 1 40 3;
-#X connect 29 0 28 2;
-#X connect 29 1 13 2;
-#X connect 30 0 28 0;
-#X connect 31 0 22 0;
-#X connect 31 1 30 1;
-#X connect 31 2 8 3;
-#X connect 35 0 40 0;
-#X connect 35 1 17 0;
-#X connect 36 0 40 2;
-#X connect 36 1 31 0;
-#X connect 38 0 29 0;
-#X connect 39 0 28 1;
-#X connect 39 1 3 0;
-#X connect 40 0 32 0;
+#X connect 4 0 34 0;
+#X connect 6 0 26 0;
+#X connect 8 0 40 5;
+#X connect 9 0 20 0;
+#X connect 10 0 22 0;
+#X connect 12 0 40 0;
+#X connect 12 1 40 1;
+#X connect 12 2 40 2;
+#X connect 12 3 29 0;
+#X connect 12 4 11 0;
+#X connect 16 0 17 0;
+#X connect 16 1 12 0;
+#X connect 17 0 1 0;
+#X connect 17 1 24 0;
+#X connect 20 0 35 0;
+#X connect 20 1 30 1;
+#X connect 21 0 12 1;
+#X connect 22 0 23 0;
+#X connect 22 1 40 4;
+#X connect 23 0 12 1;
+#X connect 24 0 25 0;
+#X connect 24 1 39 1;
+#X connect 25 0 12 0;
+#X connect 26 0 12 3;
+#X connect 26 1 39 3;
+#X connect 28 0 27 2;
+#X connect 28 1 12 2;
+#X connect 29 0 27 0;
+#X connect 30 0 21 0;
+#X connect 30 1 29 1;
+#X connect 30 2 40 3;
+#X connect 34 0 39 0;
+#X connect 34 1 16 0;
+#X connect 35 0 39 2;
+#X connect 35 1 30 0;
+#X connect 37 0 28 0;
+#X connect 38 0 27 1;
+#X connect 38 1 3 0;
+#X connect 39 0 31 0;
+#X connect 41 0 40 6;
 #X restore 229 503 pd wave_writer;
 #X text 665 419 Scroll up for inlets;
 #X obj 627 -75 makefilename \$0-waveTreeLeaf;
@@ -1673,10 +1580,6 @@ famous fountains \, lol;
 #X obj 275 -119 inlet;
 #X text 312 -118 Sine ettings;
 #X obj 480 560 outlet;
-#X obj 830 -107 r \$0-array_name_main;
-#X obj 830 -60 array size;
-#X obj 830 -37 s \$0-array_size_main;
-#X obj 830 -84 t b s;
 #N canvas 910 452 794 519 sinesum_array_resolution 0;
 #N canvas 1422 770 692 384 array_markers 0;
 #X obj 189 149 / 60;
@@ -1733,7 +1636,26 @@ famous fountains \, lol;
 #X connect 8 1 12 0;
 #X connect 10 0 7 0;
 #X connect 12 0 11 0;
-#X restore 830 -6 pd sinesum_array_resolution;
+#X restore 627 -32 pd sinesum_array_resolution;
+#N canvas 338 338 450 300 size_distribution 0;
+#X obj 39 21 r \$0-array_name_main;
+#X obj 39 68 array size;
+#X obj 39 91 s \$0-array_size_main;
+#X obj 39 44 t b s;
+#X obj 39 123 r \$0-array_size_main;
+#X obj 39 146 - 3;
+#X obj 39 169 log 2;
+#X obj 39 192 i;
+#X obj 39 217 s \$0-array_size_main_log2;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 3 1 1 1;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X restore 432 -68 pd size_distribution;
 #X connect 0 0 30 0;
 #X connect 3 0 35 0;
 #X connect 3 1 36 0;
@@ -1758,8 +1680,4 @@ famous fountains \, lol;
 #X connect 36 1 34 0;
 #X connect 37 0 0 0;
 #X connect 39 0 3 0;
-#X connect 42 0 45 0;
-#X connect 43 0 44 0;
-#X connect 45 0 43 0;
-#X connect 45 1 43 1;
 #X coords 0 0 1 1 792 400 2 0 0;
