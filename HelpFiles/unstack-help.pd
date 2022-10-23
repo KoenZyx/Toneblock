@@ -1,0 +1,37 @@
+#N canvas 52 52 1054 657 12;
+#X obj 46 213 list store;
+#X obj 46 236 list append;
+#X obj 142 119 t b a;
+#X obj 46 259 t a a;
+#X listbox 46 312 136 0 0 0 - - - 0;
+#X obj 316 213 list store;
+#X obj 316 236 list append;
+#X obj 316 259 t a a;
+#X listbox 316 282 68 0 0 0 - - - 0;
+#X obj 192 119 t b a;
+#X msg 142 63 a b c d;
+#X obj 383 94 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 208 15 -0.05 0.0322581 -0.0625 0.0163934 -0.0833333 0.010989
+-0.125 0.00826446 -0.25 0.00662252 0 0.00552486 0.25 0.00473934 0.125
+0.00414938 0.0833333 0.00369004 0.0625 0.00332226 0.05 0.00302115 0.0416667
+;
+#X obj 142 96 unstack 24;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 2 1 1 1;
+#X connect 3 0 4 0;
+#X connect 3 1 0 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 5 1;
+#X connect 9 0 5 0;
+#X connect 9 1 6 1;
+#X connect 10 0 13 0;
+#X connect 11 0 5 1;
+#X connect 11 0 0 1;
+#X connect 12 0 13 0;
+#X connect 13 0 2 0;
+#X connect 13 1 9 0;

@@ -1,14 +1,12 @@
 #N canvas 537 432 1835 901 12;
-#X obj 0 0 cnv 15 267 40 empty empty empty 20 12 0 14 #ffffff #404040
+#X obj 0 0 cnv 15 267 40 empty empty empty 20 12 0 14 #c6ffc7 #404040
 0;
-#X obj 79 1 hsl 128 15 1 52001 1 0 empty empty empty 18 7 0 12 #fcfcfc
+#X obj 79 1 hsl 128 15 1 52001 1 0 empty empty empty 18 7 0 12 #ffc7c6
 #000000 #000000 0 1;
-#X text 2 1 Modulation;
 #X obj 76 100 - 1;
-#X obj 79 24 hsl 128 15 1 4001 0 0 empty empty empty 18 7 0 12 #fcfcfc
+#X obj 79 24 hsl 128 15 1 4001 0 0 empty empty empty 18 7 0 12 #c6feff
 #000000 #000000 0 1;
 #X obj 143 100 - 1;
-#X text 30 19 Attack;
 #X obj 0 -79 inlet;
 #X obj 0 -54 route mod modulation attack speed;
 #X msg 76 156 mod \$1;
@@ -23,31 +21,37 @@
 #X obj 262 -29 unpack;
 #X obj 322 -54 f 1200;
 #X obj 322 -29 pack 1200 50;
+#X obj 209 0 cnv 15 58 40 empty empty empty 20 12 0 14 #ffffff #404040
+0;
 #X floatatom 209 0 8 0 0 0 - - - 0;
 #X floatatom 209 20 8 0 0 0 - - - 0;
-#X connect 1 0 3 0;
-#X connect 3 0 15 0;
-#X connect 3 0 21 0;
-#X connect 4 0 5 0;
-#X connect 5 0 16 0;
-#X connect 5 0 22 0;
-#X connect 7 0 8 0;
-#X connect 8 0 14 0;
-#X connect 8 1 14 0;
-#X connect 8 2 13 0;
-#X connect 8 3 13 0;
-#X connect 9 0 11 0;
-#X connect 10 0 12 0;
-#X connect 13 0 4 0;
-#X connect 14 0 1 0;
-#X connect 15 0 9 0;
-#X connect 15 1 19 1;
-#X connect 16 0 10 0;
-#X connect 16 1 20 1;
+#X obj 0 0 cnv 15 74 40 empty empty empty 20 12 0 14 #ffffff #404040
+0;
+#X text 2 1 Modulation;
+#X text 9 19 M. Attack;
+#X connect 1 0 2 0;
+#X connect 2 0 13 0;
+#X connect 2 0 20 0;
+#X connect 3 0 4 0;
+#X connect 4 0 14 0;
+#X connect 4 0 21 0;
+#X connect 5 0 6 0;
+#X connect 6 0 12 0;
+#X connect 6 1 12 0;
+#X connect 6 2 11 0;
+#X connect 6 3 11 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X connect 11 0 3 0;
+#X connect 12 0 1 0;
+#X connect 13 0 7 0;
+#X connect 13 1 17 1;
+#X connect 14 0 8 0;
+#X connect 14 1 18 1;
+#X connect 15 0 16 0;
+#X connect 15 1 17 0;
+#X connect 16 0 12 0;
+#X connect 16 1 11 0;
 #X connect 17 0 18 0;
-#X connect 17 1 19 0;
-#X connect 18 0 14 0;
-#X connect 18 1 13 0;
-#X connect 19 0 20 0;
-#X connect 20 0 17 0;
+#X connect 18 0 15 0;
 #X coords 0 -1 1 1 267 40 1 0 0;
