@@ -4,7 +4,7 @@ Waveform Synth made with PureData and turned into a VST3 using Camomile.
 TONEBLOCK STILL NEEDS WORK, EXPECT BUGS! and please report any bugs you find.
 (See the issue list at the bottom of this file)
 
-## Install notes
+## Install notes (Win64 only for now)
 - Place the Toneblock folder* in your VST3 folder and (if needed) tell your DAW to scan for new plugins. 
   *the folder name needs to be exactly the same as the name of the vst3 file
 - If you need/want to use the help files (outside the DAW) move them into the Toneblock folder, that way puredata should be able to find them when you right click the relevant object. 
