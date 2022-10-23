@@ -1,0 +1,33 @@
+#N canvas 234 234 450 300 12;
+#X obj 106 144 addlet;
+#X floatatom 125 233 5 0 0 0 - - - 0;
+#X text 165 234 total;
+#X floatatom 76 190 5 0 0 0 - - - 0;
+#X floatatom 145 190 5 0 0 0 - - - 0;
+#X text 23 191 Left in;
+#X text 187 191 Right in;
+#X floatatom 76 103 5 0 0 0 - - - 0;
+#X floatatom 145 103 5 0 0 0 - - - 0;
+#X obj 76 37 loadbang;
+#X msg 76 63 3;
+#X obj 145 37 loadbang;
+#X msg 145 63 4;
+#X text 158 143 Outputs from right to left;
+#X obj 125 264 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 145 214 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 76 214 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X connect 0 0 3 0;
+#X connect 0 1 1 0;
+#X connect 0 2 4 0;
+#X connect 1 0 14 0;
+#X connect 3 0 16 0;
+#X connect 4 0 15 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 1;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 12 0;
+#X connect 12 0 8 0;

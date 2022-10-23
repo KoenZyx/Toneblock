@@ -1,0 +1,14 @@
+#N canvas 1205 377 450 300 10;
+#X obj 66 76 bintopol;
+#X floatatom 66 99 5 0 0 0 - - - 0;
+#X obj 66 24 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X text 125 76 Turns 0 into -1 \, that's all;
+#X msg 99 24 0;
+#X text 128 24 becomes -1;
+#X text 128 49 passes through;
+#X msg 99 50 2;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 0;
+#X connect 7 0 0 0;

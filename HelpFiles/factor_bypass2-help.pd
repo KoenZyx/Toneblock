@@ -1,0 +1,16 @@
+#N canvas 52 52 583 300 12;
+#X obj 210 27 tgl 15 1 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 213 51 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 101 117 5 0 0 0 - - - 0;
+#X floatatom 101 43 5 0 0 0 - - - 0;
+#X text 101 158 This is the inverted version;
+#X obj 101 91 factor_bypass2 1;
+#X obj 101 182 factor_bypass 1;
+#X text 224 71 0 is completely unified/bypassed;
+#X text 224 93 1 is off;
+#X connect 0 0 1 0;
+#X connect 1 0 5 1;
+#X connect 3 0 5 0;
+#X connect 5 0 2 0;

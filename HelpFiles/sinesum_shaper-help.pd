@@ -1,0 +1,16 @@
+#N canvas 421 344 750 308 12;
+#X text 100 80 Arg 1 is the array name;
+#X text 100 100 Arg 2 is the normalize toggle;
+#X obj 86 185 sinesum_shaper sinesum_shaper_testArr 1;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array sinesum_shaper_testArr 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 100 -1 200 140 1;
+#X restore 477 74 graph;
+#X text 210 164 Norm.;
+#X text 333 164 Arr. name;
+#X text 83 208 Reading;
+#X text 84 164 Writing;

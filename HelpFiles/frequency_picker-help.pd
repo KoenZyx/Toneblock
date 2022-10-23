@@ -1,0 +1,16 @@
+#N canvas 1639 459 832 478 12;
+#X obj 113 160 frequency_picker;
+#X text 145 127 C (%12);
+#X msg 113 127 m 36;
+#X floatatom 113 202 9 0 0 0 - - - 0;
+#X msg 97 99 f 440;
+#X text 137 99 A;
+#X text 46 161 Oct. down;
+#X text 286 161 Oct. up;
+#X text 30 98 Frequency;
+#X text 31 127 Midi note;
+#X text 10 5 messages: -f -frequency -m -midi;
+#X text 223 206 Koen Riksen 2022;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 0;
